@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ title }} | {{ site.name }}{% endblock %}
+{% block description %}{{ intro or site.description }}{% endblock %}
 
 {% block content %}
 <section class="block first">
@@ -7,7 +8,8 @@
   {% if intro %}<p class="page-intro">{{ intro }}</p>{% endif %}
   {% if tags %}
   <ul class="tags tag-filter" aria-label="Etiketler">
-    {% for t in tags %}<li><a href="{{ root }}etiket/{{ t | slugify }}/">{{ t }}</a></li>{% endfor %}
+    <li><a href="{{ root }}blog/"{% if not current_tag %} aria-current="page"{% endif %}>Hepsi</a></li>
+    {% for t in tags %}<li><a href="{{ root }}etiket/{{ t | slugify }}/"{% if current_tag == t %} aria-current="page"{% endif %}>#{{ t }} <small>{{ tag_counts[t] }}</small></a></li>{% endfor %}
   </ul>
   {% endif %}
   {% if items %}

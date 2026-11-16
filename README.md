@@ -9,8 +9,12 @@ Python ile yazılmış küçük bir statik site üreticisiyle yapılan kişisel 
 - Markdown + YAML frontmatter ile yazı ve proje sayfaları
 - Otomatik blog listesi, tarih sıralama, okuma süresi, etiket sayfaları
 - Önceki / sonraki yazı gezinmesi
+- Proje galerisi (kart görseli isteğe bağlı), Hakkımda + indirilebilir CV, İletişim sayfası
 - RSS beslemesi ve sitemap (`site.yml` içinde `base_url` verilince)
-- Açık / koyu tema (sistem ayarına göre), mobil uyumlu tasarım
+- SEO: canonical link, Open Graph / X paylaşım önizlemeleri, schema.org verisi
+- Açık / koyu tema: sistem ayarına uyar, menüdeki düğmeyle değiştirilir ve hatırlanır
+- Mobil uyumlu tasarım
+- `sample: true` olan yazı ve projeler "Örnek" rozetiyle gösterilir
 - Yerel önizleme sunucusu: dosya kaydedince site kendini yeniden üretir
 
 ## Kurulum
@@ -32,9 +36,11 @@ python build.py --serve    # http://localhost:8000 adresinde canlı önizleme
 
 | Yol | Ne işe yarar |
 | --- | --- |
-| `site.yml` | Ad, alt başlık, menü, sosyal linkler |
+| `site.yml` | Ad, menü, site adresi, CV dosyası, iletişim kartları |
 | `content/index.md` | Ana sayfadaki tanıtım yazısı |
 | `content/hakkimda.md` | Hakkımda sayfası |
+| `content/iletisim.md` | İletişim sayfasının giriş yazısı |
+| `static/cv/enes-donmez-cv.pdf` | İndirilebilir CV (şimdilik yer tutucu) |
 | `content/blog/*.md` | Blog yazıları |
 | `content/projeler/*.md` | Projeler |
 | `templates/` | Jinja2 HTML şablonları |

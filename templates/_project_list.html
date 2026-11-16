@@ -1,10 +1,16 @@
-<ul class="projects">
+<ul class="gallery">
   {% for p in projects %}
-  <li class="project{% if p.meta.side %} side-{{ p.meta.side }}{% endif %}">
+  <li class="card{% if p.meta.side %} side-{{ p.meta.side }}{% endif %}">
     <a href="{{ root }}{{ p.url }}">
-      <span class="project-kind">{{ p.meta.kind }}</span>
-      <span class="project-title">{{ p.title }}</span>
-      <span class="project-desc">{{ p.meta.description }}</span>
+      <span class="card-media">
+        {% if p.meta.image %}<img src="{{ root }}{{ p.meta.image }}" alt="" loading="lazy">
+        {% else %}<span class="card-mono" aria-hidden="true">{{ p.title[:2] }}</span>{% endif %}
+      </span>
+      <span class="card-body">
+        <span class="project-kind">{{ p.meta.kind }}{% if p.meta.year %} · {{ p.meta.year }}{% endif %}</span>
+        <span class="project-title">{{ p.title }}{% if p.sample %} <span class="badge">Örnek</span>{% endif %}</span>
+        <span class="project-desc">{{ p.meta.description }}</span>
+      </span>
     </a>
   </li>
   {% endfor %}

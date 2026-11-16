@@ -3,8 +3,9 @@
   <li>
     <a href="{{ root }}{{ p.url }}">
       <time datetime="{{ p.date }}">{{ p.date | tr_date }}</time>
-      <span class="post-title">{{ p.title }}</span>
+      <span class="post-title">{{ p.title }}{% if p.sample %} <span class="badge">Örnek</span>{% endif %}</span>
       {% if p.meta.description %}<span class="post-desc">{{ p.meta.description }}</span>{% endif %}
+      <span class="post-info">{{ p.reading_time }} dk okuma{% for t in p.tags %} · #{{ t }}{% endfor %}</span>
     </a>
   </li>
   {% endfor %}

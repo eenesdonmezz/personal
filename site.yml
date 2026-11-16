@@ -7,8 +7,19 @@ handle: "enes dönmez"
 description: "Enes Dönmez: İZÜ Sosyal Hizmet öğrencisi ve En2Studios kurucu ortağı."
 # Fotoğraf: proje klasörüne "profil.jpg" (veya .png/.webp) koyman yeterli.
 
-# GitHub Pages adresi (RSS ve sitemap için)
-base_url: "https://eddonmez3466-oss.github.io/personel"
+# GitHub Pages adresi (RSS, sitemap ve paylaşım önizlemeleri için).
+# Sonunda "/" olmasın.
+base_url: "https://eenesdonmezz.github.io/personal"
+
+# Paylaşım önizlemesinde (WhatsApp, LinkedIn, X...) görünen görsel.
+# Boş bırakılırsa profil fotoğrafı kullanılır.
+og_image: ""
+
+# CV dosyası. Şimdilik bir yer tutucu PDF var; gerçek CV'ni aynı adla
+# static/cv/ klasörüne koyman yeterli.
+cv:
+  file: "static/cv/enes-donmez-cv.pdf"
+  updated: ""          # örn. "Kasım 2026"; boşsa gösterilmez
 
 # Ana sayfadaki iki alan. Renkler "ö"nün noktalarıyla eşleşir.
 lanes:
@@ -25,10 +36,22 @@ lanes:
 nav:
   - { text: "Hakkımda", href: "hakkimda/" }
   - { text: "Yazılar",  href: "blog/" }
+  - { text: "Projeler", href: "projeler/" }
+  - { text: "İletişim", href: "iletisim/" }
 
+# Ana sayfadaki kısa link satırı
 links:
   - { text: "GitHub",  href: "https://github.com/eddonmez3466-oss" }
   - { text: "En2Studios", href: "https://www.en2studios.com" }
   - { text: "E-posta", href: "mailto:ed.donmez3466@gmail.com" }
+
+# İletişim sayfasındaki kartlar. href boşsa kart "eklenecek" diye soluk görünür;
+# adresi yazınca kendiliğinden link olur. İstemediğin satırı silebilirsin.
+contact:
+  - { name: "E-posta",    handle: "ed.donmez3466@gmail.com", href: "mailto:ed.donmez3466@gmail.com" }
+  - { name: "GitHub",     handle: "eddonmez3466-oss",        href: "https://github.com/eddonmez3466-oss" }
+  - { name: "En2Studios", handle: "en2studios.com",          href: "https://www.en2studios.com" }
+  - { name: "LinkedIn",   handle: "",                        href: "" }
+  - { name: "Instagram",  handle: "",                        href: "" }
 
 email: "ed.donmez3466@gmail.com"

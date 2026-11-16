@@ -1,11 +1,17 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }} | {{ site.name }}{% endblock %}
 {% block description %}{{ page.meta.description or site.description }}{% endblock %}
+{% block jsonld %}{% if page.section == "blog" %}
+  <script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "BlogPosting", "headline": page.title, "description": page.meta.description or "", "datePublished": page.date | string, "inLanguage": "tr", "author": {"@type": "Person", "name": site.name}, "keywords": page.tags | join(", "), "url": canonical} | tojson }}</script>
+{% endif %}{% endblock %}
 
 {% block content %}
 <article class="article">
   <a class="back" href="{{ root }}{{ page.section }}/">{{ "Bütün yazılar" if page.section == "blog" else "Bütün projeler" }}</a>
-  {% if page.meta.kind %}<p class="project-kind">{{ page.meta.kind }}</p>{% endif %}
+  {% if page.sample %}
+  <p class="sample-note"><strong>Örnek içerik.</strong> Bu {{ "yazı" if page.section == "blog" else "proje" }} sitenin nasıl görüneceğini göstermek için konuldu. Gerçek içerikle değiştir ya da sil: <code>content/{{ page.section }}/{{ page.slug }}.md</code></p>
+  {% endif %}
+  {% if page.meta.kind %}<p class="project-kind">{{ page.meta.kind }}{% if page.meta.year %} · {{ page.meta.year }}{% endif %}</p>{% endif %}
   <h1>{{ page.title }}</h1>
   {% if page.section == "blog" %}
   <p class="post-meta"><time datetime="{{ page.date }}">{{ page.date | tr_date }}</time>, {{ page.reading_time }} dakikalık okuma</p>
@@ -13,9 +19,10 @@
   {% if page.meta.link %}<p class="post-meta"><a href="{{ page.meta.link }}">{{ page.meta.link_text or page.meta.link }}</a></p>{% endif %}
   {% if page.tags %}
   <ul class="tags" aria-label="Etiketler">
-    {% for t in page.tags %}<li><a href="{{ root }}etiket/{{ t | slugify }}/">{{ t }}</a></li>{% endfor %}
+    {% for t in page.tags %}<li><a href="{{ root }}etiket/{{ t | slugify }}/">#{{ t }}</a></li>{% endfor %}
   </ul>
   {% endif %}
+  {% if page.meta.image %}<img class="cover" src="{{ root }}{{ page.meta.image }}" alt="">{% endif %}
 
   <div class="prose">{{ page.html | safe }}</div>
 

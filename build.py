@@ -20,7 +20,8 @@ import sys
 import threading
 import time
 from dataclasses import dataclass, field
-from datetime import date
+from datetime import date, datetime, time as dtime, timezone, timedelta
+from email.utils import format_datetime
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -40,6 +41,7 @@ FRONTMATTER = re.compile(r"\A---\s*\n(.*?)\n---\s*\n(.*)\Z", re.S)
 TR_MONTHS = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz",
              "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
 WORDS_PER_MINUTE = 200
+TR_TZ = timezone(timedelta(hours=3))
 
 
 @dataclass
@@ -64,6 +66,11 @@ class Page:
     def reading_time(self) -> int:
         return max(1, round(self.words / WORDS_PER_MINUTE))
 
+    @property
+    def sample(self) -> bool:
+        """Örnek içerik: sayfada "örnek" rozetiyle gösterilir."""
+        return bool(self.meta.get("sample"))
+
 
 def slugify(text: str) -> str:
     table = str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosuCGIOSU")
@@ -73,6 +80,10 @@ def slugify(text: str) -> str:
 
 def tr_date(d: date | None) -> str:
     return f"{d.day} {TR_MONTHS[d.month - 1]} {d.year}" if d else ""
+
+
+def rfc822(d: date) -> str:
+    return format_datetime(datetime.combine(d, dtime(9, 0), TR_TZ))
 
 
 def umlaut(text: str) -> Markup:
@@ -110,6 +121,7 @@ def write(rel: str, html: str) -> None:
 def build() -> None:
     config = yaml.safe_load((ROOT / "site.yml").read_text(encoding="utf-8"))
     base_url = config.get("base_url", "").rstrip("/")
+    config["base_url"] = base_url
 
     env = Environment(loader=FileSystemLoader(TEMPLATES),
                       autoescape=select_autoescape(["html"]))
@@ -137,9 +149,19 @@ def build() -> None:
             config["photo"] = f"static/img/{photo.name}"
             break
 
+    # CV: site.yml'deki dosya static/ altında varsa Hakkımda'da indirme düğmesi çıkar
+    cv_file = (config.get("cv") or {}).get("file", "")
+    config["cv_file"] = cv_file if cv_file and (ROOT / cv_file).exists() else ""
+    # Arama motorları için "bu profiller de benim" listesi (e-posta hariç)
+    config["same_as"] = [c["href"] for c in config.get("contact", [])
+                         if c.get("href", "").startswith("http")]
+
     def render(template: str, rel: str, **ctx) -> None:
         depth = rel.count("/")
         ctx["root"] = "../" * depth  # göreli linkler: site her alt klasörde çalışır
+        path = rel.removesuffix("index.html")
+        ctx["path"] = path
+        ctx["canonical"] = f"{base_url}/{path}" if base_url else ""
         write(rel, env.get_template(template).render(**ctx))
 
     posts = load_section("blog")
@@ -147,23 +169,29 @@ def build() -> None:
     projects = sorted(load_section("projeler"), key=lambda p: p.meta.get("order", 99))
     home = read_page(CONTENT / "index.md")
     about = read_page(CONTENT / "hakkimda.md")
+    contact = read_page(CONTENT / "iletisim.md")
+    all_tags = sorted({t for p in posts for t in p.tags})
+    tag_counts = {t: sum(t in p.tags for p in posts) for t in all_tags}
 
     render("home.html", "index.html", page=home,
-           posts=posts[:5], projects=projects[:4])
-    render("page.html", "hakkimda/index.html", page=about)
+           posts=posts[:3], projects=projects[:4])
+    render("about.html", "hakkimda/index.html", page=about)
+    render("contact.html", "iletisim/index.html", page=contact)
 
-    render("list.html", "blog/index.html", title="Yazılar", items=posts,
-           tags=sorted({t for p in posts for t in p.tags}))
+    render("list.html", "blog/index.html", title="Yazılar",
+           intro="Okul, stüdyo ve aklıma takılanlar üzerine notlar.",
+           items=posts, tags=all_tags, tag_counts=tag_counts)
     for i, post in enumerate(posts):
         newer = posts[i - 1] if i > 0 else None
         older = posts[i + 1] if i + 1 < len(posts) else None
         render("post.html", f"{post.url}index.html", page=post,
-               newer=newer, older=older)
+               newer=newer, older=older, og_type="article")
 
-    for tag in {t for p in posts for t in p.tags}:
+    for tag in all_tags:
         tagged = [p for p in posts if tag in p.tags]
         render("list.html", f"etiket/{slugify(tag)}/index.html",
-               title=f"Etiket: {tag}", items=tagged, tags=[])
+               title=f"Etiket: {tag}", items=tagged, tags=all_tags,
+               tag_counts=tag_counts, current_tag=tag)
 
     render("list.html", "projeler/index.html", title="Projeler", kind="projects",
            intro="Okulda ve En2Studios'ta üzerinde çalıştığım işler.",
@@ -176,21 +204,35 @@ def build() -> None:
 
     # RSS ve sitemap: base_url verilmişse mutlak linklerle üretilir
     if base_url:
-        items = "".join(
-            f"<item><title>{escape(p.title)}</title>"
-            f"<link>{base_url}/{p.url}</link><guid>{base_url}/{p.url}</guid>"
-            f"<description>{escape(p.meta.get('description', ''))}</description></item>"
-            for p in posts)
+        def item(p: Page) -> str:
+            title = ("Örnek: " if p.sample else "") + p.title
+            cats = "".join(f"<category>{escape(t)}</category>" for t in p.tags)
+            pub = f"<pubDate>{rfc822(p.date)}</pubDate>" if p.date else ""
+            return (f"<item><title>{escape(title)}</title>"
+                    f"<link>{base_url}/{p.url}</link>"
+                    f'<guid isPermaLink="true">{base_url}/{p.url}</guid>{pub}'
+                    f"<description>{escape(p.meta.get('description', ''))}</description>"
+                    f"{cats}</item>")
+        last = (f"<lastBuildDate>{rfc822(posts[0].date)}</lastBuildDate>"
+                if posts and posts[0].date else "")
         write("feed.xml",
-              f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel>'
+              '<?xml version="1.0" encoding="UTF-8"?>'
+              '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
               f"<title>{escape(config['name'])}</title><link>{base_url}/</link>"
               f"<description>{escape(config.get('description', ''))}</description>"
-              f"{items}</channel></rss>")
-        urls = ["", "hakkimda/", "blog/", "projeler/"] + [p.url for p in posts + projects]
+              f"<language>tr</language>{last}"
+              f'<atom:link href="{base_url}/feed.xml" rel="self" type="application/rss+xml"/>'
+              + "".join(item(p) for p in posts) + "</channel></rss>")
+        urls = [("", None), ("hakkimda/", None), ("iletisim/", None),
+                ("blog/", posts[0].date if posts else None), ("projeler/", None)]
+        urls += [(p.url, p.date) for p in posts + projects]
+        urls += [(f"etiket/{slugify(t)}/", None) for t in all_tags]
         write("sitemap.xml",
               '<?xml version="1.0" encoding="UTF-8"?>'
               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-              + "".join(f"<url><loc>{base_url}/{u}</loc></url>" for u in urls)
+              + "".join(f"<url><loc>{base_url}/{u}</loc>"
+                        + (f"<lastmod>{d.isoformat()}</lastmod>" if d else "")
+                        + "</url>" for u, d in urls)
               + "</urlset>")
 
     print(f"✓ Site üretildi: {len(posts)} yazı, {len(projects)} proje → docs/")

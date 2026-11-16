@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} | {{ site.name }}{% endblock %}
+{% block description %}{{ page.meta.description or site.description }}{% endblock %}
+
+{% block content %}
+<section class="block first">
+  <h1 class="page-title">{{ page.title }}</h1>
+  <div class="page-intro prose">{{ page.html | safe }}</div>
+  <ul class="contact-grid">
+    {% for c in site.contact %}
+    <li>
+      {% if c.href %}
+      <a class="contact-card" href="{{ c.href }}"{% if not c.href.startswith("mailto:") %} rel="me noopener" target="_blank"{% endif %}>
+        <span class="contact-name">{{ c.name }}</span>
+        <span class="contact-handle">{{ c.handle or c.href }}</span>
+      </a>
+      {% else %}
+      <span class="contact-card empty">
+        <span class="contact-name">{{ c.name }}</span>
+        <span class="contact-handle">Eklenecek</span>
+      </span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}
