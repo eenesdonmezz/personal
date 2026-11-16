@@ -126,10 +126,11 @@ def build() -> None:
     shutil.copytree(STATIC, OUT / "static")
     (OUT / ".nojekyll").touch()
 
-    # Profil fotoğrafı: proje klasöründeki profil.jpg/.jpeg/.png/.webp
+    # Profil fotoğrafı: gorsel/ (ya da proje kökündeki) profil.jpg/.jpeg/.png/.webp
     config["photo"] = ""
-    for ext in ("jpg", "jpeg", "png", "webp", "JPG", "JPEG", "PNG"):
-        photo = ROOT / f"profil.{ext}"
+    candidates = [folder / f"profil.{ext}" for folder in (ROOT / "gorsel", ROOT)
+                  for ext in ("jpg", "jpeg", "png", "webp", "JPG", "JPEG", "PNG")]
+    for photo in candidates:
         if photo.exists():
             (OUT / "static" / "img").mkdir(parents=True, exist_ok=True)
             shutil.copy2(photo, OUT / "static" / "img" / photo.name)
@@ -196,7 +197,7 @@ def build() -> None:
 
 
 def snapshot() -> dict[Path, float]:
-    files = [ROOT / "site.yml"] + list(ROOT.glob("profil.*"))
+    files = [ROOT / "site.yml"] + list(ROOT.glob("profil.*")) + list(ROOT.glob("gorsel/profil.*"))
     for folder in (CONTENT, TEMPLATES, STATIC):
         files += [p for p in folder.rglob("*") if p.is_file()]
     return {p: p.stat().st_mtime for p in files}
