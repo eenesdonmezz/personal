@@ -124,6 +124,23 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
   to   { transform: translateY(0); }
 }
 
+/* Profil fotoğrafı: ismin sağında, alt kenarı isimle hizalı */
+.hero-top.has-photo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+.portrait {
+  width: clamp(150px, 22vw, 240px);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 10px;
+  border-bottom: 8px solid var(--yellow);
+  border-left: 8px solid var(--blue);
+  display: block;
+}
+
 .hero-body {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
@@ -251,6 +268,8 @@ a.lane-title:hover { text-decoration: underline; text-decoration-color: var(--ye
 /* ---------- Mobil ---------- */
 @media (max-width: 760px) {
   .hero-body { grid-template-columns: 1fr; }
+  .hero-top.has-photo { grid-template-columns: 1fr; }
+  .portrait { order: -1; width: 140px; }
   .projects { grid-template-columns: 1fr; }
   .posts a { grid-template-columns: 1fr; }
   .posts time { grid-row: auto; padding: 0; }

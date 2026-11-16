@@ -126,6 +126,16 @@ def build() -> None:
     shutil.copytree(STATIC, OUT / "static")
     (OUT / ".nojekyll").touch()
 
+    # Profil fotoğrafı: proje klasöründeki profil.jpg/.jpeg/.png/.webp
+    config["photo"] = ""
+    for ext in ("jpg", "jpeg", "png", "webp", "JPG", "JPEG", "PNG"):
+        photo = ROOT / f"profil.{ext}"
+        if photo.exists():
+            (OUT / "static" / "img").mkdir(parents=True, exist_ok=True)
+            shutil.copy2(photo, OUT / "static" / "img" / photo.name)
+            config["photo"] = f"static/img/{photo.name}"
+            break
+
     def render(template: str, rel: str, **ctx) -> None:
         depth = rel.count("/")
         ctx["root"] = "../" * depth  # göreli linkler: site her alt klasörde çalışır
@@ -186,7 +196,7 @@ def build() -> None:
 
 
 def snapshot() -> dict[Path, float]:
-    files = [ROOT / "site.yml"]
+    files = [ROOT / "site.yml"] + list(ROOT.glob("profil.*"))
     for folder in (CONTENT, TEMPLATES, STATIC):
         files += [p for p in folder.rglob("*") if p.is_file()]
     return {p: p.stat().st_mtime for p in files}

@@ -5,7 +5,7 @@ first_name: "Enes"
 last_name: "Dönmez"     # içindeki "ö" ana sayfada iki renkli noktayla çizilir
 handle: "enes dönmez"
 description: "Enes Dönmez: İZÜ Sosyal Hizmet öğrencisi ve En2Studios kurucu ortağı."
-photo: ""               # fotoğraf koyarsan: "static/img/foto.jpg"
+# Fotoğraf: proje klasörüne "profil.jpg" (veya .png/.webp) koyman yeterli.
 
 # GitHub Pages adresi (RSS ve sitemap için)
 base_url: "https://eddonmez3466-oss.github.io/personel"
@@ -24,7 +24,6 @@ lanes:
 
 nav:
   - { text: "Hakkımda", href: "hakkimda/" }
-  - { text: "Projeler", href: "projeler/" }
   - { text: "Yazılar",  href: "blog/" }
 
 links:

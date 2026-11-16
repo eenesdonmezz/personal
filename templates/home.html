@@ -3,10 +3,13 @@
 
 {% block content %}
 <section class="hero">
-  <h1 class="name" aria-label="{{ site.name }}">
-    <span class="name-line" aria-hidden="true">{{ site.first_name }}</span>
-    <span class="name-line" aria-hidden="true">{{ site.last_name | umlaut }}</span>
-  </h1>
+  <div class="hero-top{% if site.photo %} has-photo{% endif %}">
+    <h1 class="name" aria-label="{{ site.name }}">
+      <span class="name-line" aria-hidden="true">{{ site.first_name }}</span>
+      <span class="name-line" aria-hidden="true">{{ site.last_name | umlaut }}</span>
+    </h1>
+    {% if site.photo %}<img class="portrait" src="{{ root }}{{ site.photo }}" alt="{{ site.name }}">{% endif %}
+  </div>
 
   <div class="hero-body">
     <div class="intro">{{ page.html | safe }}</div>
@@ -29,16 +32,6 @@
     </ul>
   </div>
 </section>
-
-{% if projects %}
-<section class="block">
-  <header class="block-head">
-    <h2>Projeler</h2>
-    <a href="{{ root }}projeler/">Hepsini gör</a>
-  </header>
-  {% include "_project_list.html" with context %}
-</section>
-{% endif %}
 
 {% if posts %}
 <section class="block">

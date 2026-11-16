@@ -24,7 +24,6 @@ tasarlayarak cevaplamaya çalışıyorum.
 
 - Sosyal hizmet ve topluluk çalışmaları
 - Oyun tasarımı ve Roblox geliştirme
-- Python ile küçük araçlar ve dijital sanat
 
 ## İletişim
 
