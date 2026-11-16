@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block body_class %}home{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h1 class="name" aria-label="{{ site.name }}">
+    <span class="name-line" aria-hidden="true">{{ site.first_name }}</span>
+    <span class="name-line" aria-hidden="true">{{ site.last_name | umlaut }}</span>
+  </h1>
+
+  <div class="hero-body">
+    <div class="intro">{{ page.html | safe }}</div>
+
+    <dl class="lanes">
+      {% for lane in site.lanes %}
+      <div class="lane lane-{{ lane.color }}">
+        <dt>{{ lane.place }}</dt>
+        <dd>
+          {% if lane.href %}<a class="lane-title" href="{{ lane.href }}">{{ lane.title }}</a>
+          {% else %}<span class="lane-title">{{ lane.title }}</span>{% endif %}
+          <span class="lane-detail">{{ lane.detail }}</span>
+        </dd>
+      </div>
+      {% endfor %}
+    </dl>
+
+    <ul class="textlinks">
+      {% for l in site.links %}<li><a href="{{ l.href }}">{{ l.text }}</a></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% if projects %}
+<section class="block">
+  <header class="block-head">
+    <h2>Projeler</h2>
+    <a href="{{ root }}projeler/">Hepsini gör</a>
+  </header>
+  {% include "_project_list.html" with context %}
+</section>
+{% endif %}
+
+{% if posts %}
+<section class="block">
+  <header class="block-head">
+    <h2>Yazılar</h2>
+    <a href="{{ root }}blog/">Hepsini gör</a>
+  </header>
+  {% include "_post_list.html" with context %}
+</section>
+{% endif %}
+{% endblock %}

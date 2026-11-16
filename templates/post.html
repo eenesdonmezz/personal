@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} | {{ site.name }}{% endblock %}
+{% block description %}{{ page.meta.description or site.description }}{% endblock %}
+
+{% block content %}
+<article class="article">
+  <a class="back" href="{{ root }}{{ page.section }}/">{{ "Bütün yazılar" if page.section == "blog" else "Bütün projeler" }}</a>
+  {% if page.meta.kind %}<p class="project-kind">{{ page.meta.kind }}</p>{% endif %}
+  <h1>{{ page.title }}</h1>
+  {% if page.section == "blog" %}
+  <p class="post-meta"><time datetime="{{ page.date }}">{{ page.date | tr_date }}</time>, {{ page.reading_time }} dakikalık okuma</p>
+  {% endif %}
+  {% if page.meta.link %}<p class="post-meta"><a href="{{ page.meta.link }}">{{ page.meta.link_text or page.meta.link }}</a></p>{% endif %}
+  {% if page.tags %}
+  <ul class="tags" aria-label="Etiketler">
+    {% for t in page.tags %}<li><a href="{{ root }}etiket/{{ t | slugify }}/">{{ t }}</a></li>{% endfor %}
+  </ul>
+  {% endif %}
+
+  <div class="prose">{{ page.html | safe }}</div>
+
+  {% if newer or older %}
+  <nav class="pager" aria-label="Diğer yazılar">
+    {% if older %}<a class="pager-prev" href="{{ root }}{{ older.url }}"><small>Önceki yazı</small>{{ older.title }}</a>{% else %}<span></span>{% endif %}
+    {% if newer %}<a class="pager-next" href="{{ root }}{{ newer.url }}"><small>Sonraki yazı</small>{{ newer.title }}</a>{% endif %}
+  </nav>
+  {% endif %}
+</article>
+{% endblock %}

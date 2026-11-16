@@ -1,0 +1,11 @@
+<ul class="projects">
+  {% for p in projects %}
+  <li class="project{% if p.meta.side %} side-{{ p.meta.side }}{% endif %}">
+    <a href="{{ root }}{{ p.url }}">
+      <span class="project-kind">{{ p.meta.kind }}</span>
+      <span class="project-title">{{ p.title }}</span>
+      <span class="project-desc">{{ p.meta.description }}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

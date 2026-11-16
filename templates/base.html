@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ site.name }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ root }}static/style.css">
+  {% if site.base_url %}<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ root }}feed.xml">{% endif %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <header class="nav">
+    <a class="brand" href="{{ root }}">{{ site.first_name }}<span class="brand-dots" aria-hidden="true"><i class="b"></i><i class="y"></i></span></a>
+    <nav aria-label="Ana menü">
+      {% for item in site.nav %}<a href="{{ root }}{{ item.href }}">{{ item.text }}</a>{% endfor %}
+    </nav>
+  </header>
+
+  <main id="icerik">{% block content %}{% endblock %}</main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-cta">Bir fikrin ya da sorun varsa yaz:<br>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p class="footer-meta">© {{ year }} {{ site.name }}. Bu site Python ile üretiliyor.</p>
+    </div>
+  </footer>
+</body>
+</html>

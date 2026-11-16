@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Sayfa bulunamadı | {{ site.name }}{% endblock %}
+
+{% block content %}
+<article class="article">
+  <h1>Bu sayfa yok</h1>
+  <p class="prose">Adres yanlış yazılmış ya da sayfa taşınmış olabilir. <a href="{{ site.base_url or '/' }}/">Ana sayfaya dön</a></p>
+</article>
+{% endblock %}

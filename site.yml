@@ -1,0 +1,35 @@
+# Sitenin genel ayarları.
+
+name: "Enes Dönmez"
+first_name: "Enes"
+last_name: "Dönmez"     # içindeki "ö" ana sayfada iki renkli noktayla çizilir
+handle: "enes dönmez"
+description: "Enes Dönmez: İZÜ Sosyal Hizmet öğrencisi ve En2Studios kurucu ortağı."
+photo: ""               # fotoğraf koyarsan: "static/img/foto.jpg"
+
+# GitHub Pages adresi (RSS ve sitemap için)
+base_url: "https://eddonmez3466-oss.github.io/personel"
+
+# Ana sayfadaki iki alan. Renkler "ö"nün noktalarıyla eşleşir.
+lanes:
+  - color: "blue"
+    place: "Okulda"
+    title: "Sosyal Hizmet"
+    detail: "İstanbul Sabahattin Zaim Üniversitesi, 2. sınıf"
+  - color: "yellow"
+    place: "Stüdyoda"
+    title: "En2Studios"
+    detail: "Kurucu ortak. Oyunlar ve dijital ürünler"
+    href: "https://www.en2studios.com"
+
+nav:
+  - { text: "Hakkımda", href: "hakkimda/" }
+  - { text: "Projeler", href: "projeler/" }
+  - { text: "Yazılar",  href: "blog/" }
+
+links:
+  - { text: "GitHub",  href: "https://github.com/eddonmez3466-oss" }
+  - { text: "En2Studios", href: "https://www.en2studios.com" }
+  - { text: "E-posta", href: "mailto:ed.donmez3466@gmail.com" }
+
+email: "ed.donmez3466@gmail.com"

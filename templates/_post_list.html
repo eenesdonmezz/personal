@@ -1,0 +1,11 @@
+<ul class="posts">
+  {% for p in (items if items is defined else posts) %}
+  <li>
+    <a href="{{ root }}{{ p.url }}">
+      <time datetime="{{ p.date }}">{{ p.date | tr_date }}</time>
+      <span class="post-title">{{ p.title }}</span>
+      {% if p.meta.description %}<span class="post-desc">{{ p.meta.description }}</span>{% endif %}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
