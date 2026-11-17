@@ -4,13 +4,10 @@ description: "Enes Dönmez: İZÜ Sosyal Hizmet öğrencisi, En2Studios kurucusu
 ---
 
 Ben Enes Dönmez. İstanbul Sabahattin Zaim Üniversitesi'nde Sosyal Hizmet
-okuyorum, şu an ikinci sınıftayım. Bir yandan da arkadaşlarımla kurduğumuz
-En2Studios'ta oyunlar ve dijital ürünler geliştiriyorum.
+okuyorum, şu an ikinci sınıftayım.
 
-İki alan ilk bakışta birbirinden uzak görünüyor ama ikisi de aynı soruyla
-başlıyor: karşımdaki kişinin neye ihtiyacı var? Sosyal hizmette bunu
-insanların hayatına dokunarak, stüdyoda ise kullandıkları şeyleri
-tasarlayarak cevaplamaya çalışıyorum.
+Bunun dışında arkadaşlarımla kurduğumuz En2Studios'ta oyunlar ve dijital
+ürünler geliştiriyorum.
 
 <p class="todo">Eklenecek: kendini anlatan 2-3 cümle daha (nerelisin, neden sosyal hizmet, boş zamanlarında ne yaparsın). Bu kutuyu <code>content/hakkimda.md</code> içinden silebilirsin.</p>
 

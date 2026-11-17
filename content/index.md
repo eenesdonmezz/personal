@@ -1,3 +1,2 @@
-İZÜ Sosyal Hizmet bölümünde ikinci sınıftayım ve En2Studios'un
-kurucusuyum. İnsanları anlamayı okulda, onlar için bir şeyler
-üretmeyi stüdyoda öğreniyorum.
+İZÜ Sosyal Hizmet bölümünde ikinci sınıf öğrencisiyim.
+Ayrıca En2Studios'un kurucusuyum.

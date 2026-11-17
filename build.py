@@ -194,7 +194,7 @@ def build() -> None:
                tag_counts=tag_counts, current_tag=tag)
 
     render("list.html", "projeler/index.html", title="Projeler", kind="projects",
-           intro="Okulda ve En2Studios'ta üzerinde çalıştığım işler.",
+           intro="Üzerinde çalıştığım işler.",
            items=projects, tags=[])
     for proj in projects:
         render("post.html", f"{proj.url}index.html", page=proj,
