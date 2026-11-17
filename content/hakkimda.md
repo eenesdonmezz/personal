@@ -23,8 +23,8 @@ tasarlayarak cevaplamaya çalışıyorum.
 
 ## Çalışmalar
 
-**En2Studios, kurucu.** Roblox oyunları, işletmeler için dijital
-ürünler ve web siteleri.
+**En2Studios, kurucu.** Oyunlar, işletmeler için dijital ürünler ve
+web siteleri. Şu an ilk oyunumuz geliştiriliyor.
 
 <p class="todo">Eklenecek: stüdyonun kuruluş yılı; varsa staj, gönüllülük ya da topluluk çalışmaları.</p>
 
@@ -37,7 +37,7 @@ tasarlayarak cevaplamaya çalışıyorum.
 ## İlgilendiğim konular
 
 - Sosyal hizmet ve topluluk çalışmaları
-- Oyun tasarımı ve Roblox geliştirme
+- Oyun tasarımı ve geliştirme
 
 ## İletişim
 
