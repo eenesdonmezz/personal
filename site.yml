@@ -24,11 +24,11 @@ cv:
 # Ana sayfadaki iki alan. Renkler "ö"nün noktalarıyla eşleşir.
 lanes:
   - color: "blue"
-    place: "Okulda"
+    place: "Okul"
     title: "Sosyal Hizmet"
     detail: "İstanbul Sabahattin Zaim Üniversitesi, 2. sınıf"
   - color: "yellow"
-    place: "Stüdyoda"
+    place: "Stüdyo"
     title: "En2Studios"
     detail: "Kurucu. Oyunlar ve dijital ürünler"
     href: "https://www.en2studios.com"
