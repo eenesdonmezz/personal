@@ -45,7 +45,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ root }}static/style.css">
   <script src="{{ root }}static/bg.js" defer></script>
-  {% if site.base_url %}<link rel="alternate" type="application/rss+xml" title="{{ site.name }} | Yazılar" href="{{ site.base_url }}/feed.xml">{% endif %}
 </head>
 <body class="{% block body_class %}{% endblock %}">
   <canvas class="bg-field" aria-hidden="true"></canvas>
@@ -69,8 +68,7 @@
     <div class="footer-inner">
       <p class="footer-cta">Bir fikrin ya da sorun varsa yaz:<br>
         <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-      <p class="footer-meta">© {{ year }} {{ site.name }}.
-        {% if site.base_url %}<a href="{{ site.base_url }}/feed.xml">RSS</a>{% endif %}</p>
+      <p class="footer-meta">© {{ year }} {{ site.name }}.</p>
     </div>
   </footer>
 

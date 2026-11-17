@@ -10,7 +10,7 @@ Python ile yazılmış küçük bir statik site üreticisiyle yapılan kişisel 
 - Otomatik blog listesi, tarih sıralama, okuma süresi, etiket sayfaları
 - Önceki / sonraki yazı gezinmesi
 - Proje galerisi (kart görseli isteğe bağlı), Hakkımda + indirilebilir CV, İletişim sayfası
-- RSS beslemesi ve sitemap (`site.yml` içinde `base_url` verilince)
+- Sitemap (`site.yml` içinde `base_url` verilince); RSS isteğe bağlı (`rss: true`)
 - SEO: canonical link, Open Graph / X paylaşım önizlemeleri, schema.org verisi
 - Açık / koyu tema: sistem ayarına uyar, menüdeki düğmeyle değiştirilir ve hatırlanır
 - Mobil uyumlu tasarım

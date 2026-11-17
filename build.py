@@ -217,7 +217,8 @@ def build() -> None:
                     f"{cats}</item>")
         last = (f"<lastBuildDate>{rfc822(posts[0].date)}</lastBuildDate>"
                 if posts and posts[0].date else "")
-        write("feed.xml",
+        if config.get("rss"):  # site.yml'de "rss: true" yazılırsa RSS geri gelir
+          write("feed.xml",
               '<?xml version="1.0" encoding="UTF-8"?>'
               '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
               f"<title>{escape(config['name'])}</title><link>{base_url}/</link>"
