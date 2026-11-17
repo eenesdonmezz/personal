@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block body_class %}home{% endblock %}
 {% block jsonld %}
-  <script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "WebSite", "name": site.name, "url": site.base_url ~ "/", "inLanguage": "tr"} | tojson }}</script>
+  <script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "WebSite", "name": site.name, "url": site.base_url ~ "/", "inLanguage": lang} | tojson }}</script>
 {% endblock %}
 
 {% block content %}
@@ -39,8 +39,8 @@
 {% if projects %}
 <section class="block">
   <header class="block-head">
-    <h2>Projeler</h2>
-    <a href="{{ root }}projeler/">Hepsini gör</a>
+    <h2>{{ tx.projects }}</h2>
+    <a href="{{ root }}{{ prefix }}projeler/">{{ tx.see_all }}</a>
   </header>
   {% include "_project_list.html" with context %}
 </section>
@@ -49,8 +49,8 @@
 {% if posts %}
 <section class="block">
   <header class="block-head">
-    <h2>Yazılar</h2>
-    <a href="{{ root }}blog/">Hepsini gör</a>
+    <h2>{{ tx.posts }}</h2>
+    <a href="{{ root }}{{ blog_dir }}">{{ tx.see_all }}</a>
   </header>
   {% include "_post_list.html" with context %}
 </section>

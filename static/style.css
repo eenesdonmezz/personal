@@ -445,3 +445,14 @@ a.contact-card:hover .contact-name { color: var(--blue); }
 }
 /* Geniş ışık katmanı yatay kaydırma çubuğu çıkarmasın */
 body { overflow-x: hidden; }
+
+/* ---------- Dil düğmesi (TR / EN) ---------- */
+.lang-switch {
+  min-width: 2.5rem; height: 2.5rem; padding: 0 .6rem;
+  display: inline-grid; place-items: center;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: var(--surface); color: var(--ink);
+  font-weight: 700; font-size: .9rem; letter-spacing: .04em; text-decoration: none;
+}
+.lang-switch:hover { border-color: var(--blue); color: var(--blue); }
+@media (max-width: 760px) { .nav-right nav { flex: 1; } }

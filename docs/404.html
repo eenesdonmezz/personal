@@ -10,6 +10,8 @@
   <meta name="theme-color" content="#e8edf1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#111a2c" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://eenesdonmezz.github.io/personal/404.html">
+  <link rel="alternate" hreflang="tr" href="https://eenesdonmezz.github.io/personal/404.html">
+  
 
   
   <meta property="og:site_name" content="Enes Dönmez">
@@ -50,7 +52,8 @@
       <nav aria-label="Ana menü">
         <a href="hakkimda/">Hakkımda</a><a href="blog/">Yazılar</a><a href="iletisim/">İletişim</a>
       </nav>
-      <button class="theme-toggle" type="button" aria-label="Koyu temaya geç" title="Tema">
+      
+      <button class="theme-toggle" type="button" aria-label="Koyu temaya geç" title="Tema" data-dark="Koyu temaya geç" data-light="Açık temaya geç">
         <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
         <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
       </button>
@@ -61,6 +64,7 @@
 <article class="article">
   <h1>Bu sayfa yok</h1>
   <p class="prose">Adres yanlış yazılmış ya da sayfa taşınmış olabilir. <a href="https://eenesdonmezz.github.io/personal/">Ana sayfaya dön</a></p>
+  <p class="prose muted" lang="en">This page does not exist. <a href="https://eenesdonmezz.github.io/personal/en/">Go to the English home page</a></p>
 </article>
 </main>
 
@@ -80,7 +84,7 @@
       function current() { return root.getAttribute("data-theme") || (media.matches ? "dark" : "light"); }
       function label() {
         var dark = current() === "dark";
-        btn.setAttribute("aria-label", dark ? "Açık temaya geç" : "Koyu temaya geç");
+        btn.setAttribute("aria-label", dark ? btn.dataset.light : btn.dataset.dark);
         btn.setAttribute("aria-pressed", dark ? "true" : "false");
       }
       btn.addEventListener("click", function () {

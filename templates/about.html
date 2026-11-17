@@ -15,10 +15,10 @@
   {% if site.cv_file %}
   <div class="cv-box">
     <div>
-      <p class="cv-title">Özgeçmiş (CV)</p>
-      <p class="muted">PDF olarak indir{% if site.cv and site.cv.updated %}, son güncelleme {{ site.cv.updated }}{% endif %}.</p>
+      <p class="cv-title">{{ tx.cv_title }}</p>
+      <p class="muted">{{ tx.cv_sub }}{% if site.cv and site.cv.updated %}, {{ tx.cv_updated }} {{ site.cv.updated }}{% endif %}.</p>
     </div>
-    <a class="button" href="{{ root }}{{ site.cv_file }}" download>CV'yi indir <span aria-hidden="true">↓</span></a>
+    <a class="button" href="{{ root }}{{ site.cv_file }}" download>{{ tx.cv_btn }} <span aria-hidden="true">↓</span></a>
   </div>
   {% endif %}
 

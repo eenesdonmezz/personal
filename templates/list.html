@@ -7,9 +7,9 @@
   <h1 class="page-title">{{ title }}</h1>
   {% if intro %}<p class="page-intro">{{ intro }}</p>{% endif %}
   {% if tags %}
-  <ul class="tags tag-filter" aria-label="Etiketler">
-    <li><a href="{{ root }}blog/"{% if not current_tag %} aria-current="page"{% endif %}>Hepsi</a></li>
-    {% for t in tags %}<li><a href="{{ root }}etiket/{{ t | slugify }}/"{% if current_tag == t %} aria-current="page"{% endif %}>{{ t }} <small>{{ tag_counts[t] }}</small></a></li>{% endfor %}
+  <ul class="tags tag-filter" aria-label="{{ tx.tags }}">
+    <li><a href="{{ root }}{{ blog_dir }}"{% if not current_tag %} aria-current="page"{% endif %}>{{ tx.all }}</a></li>
+    {% for t in tags %}<li><a href="{{ root }}{{ tag_dir }}{{ t | slugify }}/"{% if current_tag == t %} aria-current="page"{% endif %}>{{ t }} <small>{{ tag_counts[t] }}</small></a></li>{% endfor %}
   </ul>
   {% endif %}
   {% if items %}
@@ -19,7 +19,7 @@
       {% include "_post_list.html" with context %}
     {% endif %}
   {% else %}
-    <p class="muted">Burada henüz bir şey yok.</p>
+    <p class="muted">{{ tx.empty }}</p>
   {% endif %}
 </section>
 {% endblock %}

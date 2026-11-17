@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr">
+<html lang="{{ lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,11 +12,13 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#e8edf1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#111a2c" media="(prefers-color-scheme: dark)">
-  {% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}
+  {% if canonical %}<link rel="canonical" href="{{ canonical }}">
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ canonical }}">{% endif %}
+  {% if alt_url %}<link rel="alternate" hreflang="{{ alt_lang }}" href="{{ alt_url }}">{% endif %}
 
   {# Paylaşım önizlemeleri (Open Graph + X/Twitter) #}
   <meta property="og:site_name" content="{{ site.name }}">
-  <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale" content="{{ locale }}">
   <meta property="og:type" content="{{ og_type or 'website' }}">
   <meta property="og:title" content="{{ page_title }}">
   <meta property="og:description" content="{{ page_desc }}">
@@ -48,14 +50,15 @@
 </head>
 <body class="{% block body_class %}{% endblock %}">
   <canvas class="bg-field" aria-hidden="true"></canvas>
-  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <a class="skip" href="#icerik">{{ tx.skip }}</a>
   <header class="nav">
-    <a class="brand" href="{{ root }}">{{ site.first_name }}<span class="brand-dots" aria-hidden="true"><i class="b"></i><i class="y"></i></span></a>
+    <a class="brand" href="{{ root }}{{ prefix }}">{{ site.first_name }}<span class="brand-dots" aria-hidden="true"><i class="b"></i><i class="y"></i></span></a>
     <div class="nav-right">
-      <nav aria-label="Ana menü">
+      <nav aria-label="{{ tx.menu }}">
         {% for item in site.nav %}<a href="{{ root }}{{ item.href }}"{% if path and path.startswith(item.href) %} aria-current="page"{% endif %}>{{ item.text }}</a>{% endfor %}
       </nav>
-      <button class="theme-toggle" type="button" aria-label="Koyu temaya geç" title="Tema">
+      {% if alt is not none %}<a class="lang-switch" href="{{ root }}{{ alt }}" hreflang="{{ alt_lang }}" lang="{{ alt_lang }}" title="{{ tx.switch_title }}" data-lang="{{ alt_lang }}">{{ tx.switch_label }}</a>{% endif %}
+      <button class="theme-toggle" type="button" aria-label="{{ tx.to_dark }}" title="{{ tx.theme }}" data-dark="{{ tx.to_dark }}" data-light="{{ tx.to_light }}">
         <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
         <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
       </button>
@@ -66,7 +69,7 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <p class="footer-cta">Bir fikrin ya da sorun varsa yaz:<br>
+      <p class="footer-cta">{{ tx.footer_cta }}<br>
         <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
       <p class="footer-meta">© {{ year }} {{ site.name }}.</p>
     </div>
@@ -80,7 +83,7 @@
       function current() { return root.getAttribute("data-theme") || (media.matches ? "dark" : "light"); }
       function label() {
         var dark = current() === "dark";
-        btn.setAttribute("aria-label", dark ? "Açık temaya geç" : "Koyu temaya geç");
+        btn.setAttribute("aria-label", dark ? btn.dataset.light : btn.dataset.dark);
         btn.setAttribute("aria-pressed", dark ? "true" : "false");
       }
       btn.addEventListener("click", function () {

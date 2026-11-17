@@ -10,7 +10,8 @@ Python ile yazılmış küçük bir statik site üreticisiyle yapılan kişisel 
 - Otomatik blog listesi, tarih sıralama, okuma süresi, etiket sayfaları
 - Önceki / sonraki yazı gezinmesi
 - Proje galerisi (kart görseli isteğe bağlı), Hakkımda + indirilebilir CV, İletişim sayfası
-- Sitemap (`site.yml` içinde `base_url` verilince); RSS isteğe bağlı (`rss: true`)
+- İki dil: Türkçe kökte, İngilizce `/en/` altında; menüdeki TR/EN düğmesi aynı sayfanın diğer diline gider
+- Sitemap (`site.yml` içinde `base_url` verilince)
 - SEO: canonical link, Open Graph / X paylaşım önizlemeleri, schema.org verisi
 - Açık / koyu tema: sistem ayarına uyar, menüdeki düğmeyle değiştirilir ve hatırlanır
 - Mobil uyumlu tasarım
@@ -42,6 +43,8 @@ python build.py --serve    # http://localhost:8000 adresinde canlı önizleme
 | `content/iletisim.md` | İletişim sayfasının giriş yazısı |
 | `static/cv/enes-donmez-cv.pdf` | İndirilebilir CV (dosya konunca Hakkımda'da düğme çıkar) |
 | `content/blog/*.md` | Blog yazıları |
+| `content/en/` | İngilizce sayfalar (`index.md`, `about.md`, `contact.md`, `blog/`). Yazının İngilizcesi Türkçesiyle aynı dosya adını taşır |
+| `site.yml` → `en:` | İngilizce menü, ana sayfa kartları ve iletişim etiketleri |
 | `content/projeler/*.md` | Projeler |
 | `templates/` | Jinja2 HTML şablonları |
 | `static/` | CSS ve görseller |

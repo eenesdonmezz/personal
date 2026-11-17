@@ -56,3 +56,34 @@ contact:
   - { name: "Instagram",  handle: "@enesdnmz7",               href: "https://www.instagram.com/enesdnmz7/" }
 
 email: "ed.donmez3466@gmail.com"
+
+# İngilizce sayfalarda (/en/) yukarıdakilerin yerine geçen alanlar.
+# Burada olmayan her şey Türkçe ayarlardan aynen alınır.
+en:
+  description: "Enes Dönmez: Social Work student at İZÜ and founder of En2Studios."
+  lanes:
+    - color: "blue"
+      place: "University"
+      title: "Social Work"
+      detail: "Istanbul Sabahattin Zaim University, 2nd year"
+    - color: "yellow"
+      place: "Studio"
+      title: "En2Studios"
+      detail: "Founder. Games and digital products"
+      href: "https://www.en2studios.com"
+  nav:
+    - { text: "About",   href: "en/about/" }
+    - { text: "Posts",   href: "en/blog/" }
+    - { text: "Contact", href: "en/contact/" }
+  links:
+    - { text: "GitHub",  href: "https://github.com/eenesdonmezz" }
+    - { text: "LinkedIn", href: "https://www.linkedin.com/in/enes-d%C3%B6nmez-78242a3a4/" }
+    - { text: "Instagram", href: "https://www.instagram.com/enesdnmz7/" }
+    - { text: "En2Studios", href: "https://www.en2studios.com" }
+    - { text: "Email", href: "mailto:ed.donmez3466@gmail.com" }
+  contact:
+    - { name: "Email",      handle: "ed.donmez3466@gmail.com", href: "mailto:ed.donmez3466@gmail.com" }
+    - { name: "GitHub",     handle: "eenesdonmezz",            href: "https://github.com/eenesdonmezz" }
+    - { name: "En2Studios", handle: "en2studios.com",          href: "https://www.en2studios.com" }
+    - { name: "LinkedIn",   handle: "Enes Dönmez",             href: "https://www.linkedin.com/in/enes-d%C3%B6nmez-78242a3a4/" }
+    - { name: "Instagram",  handle: "@enesdnmz7",               href: "https://www.instagram.com/enesdnmz7/" }
