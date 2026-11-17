@@ -12,7 +12,7 @@ description: "Enes Dönmez: İZÜ Sosyal Hizmet öğrencisi ve En2Studios kurucu
 base_url: "https://eenesdonmezz.github.io/personal"
 
 # Paylaşım önizlemesinde (WhatsApp, LinkedIn, X...) görünen görsel.
-# Boş bırakılırsa profil fotoğrafı kullanılır.
+# Boş bırakılırsa önizleme görselsiz olur (Enes'in isteği).
 og_image: ""
 
 # CV dosyası. Gerçek CV'ni bu adla static/cv/ klasörüne koyunca

@@ -7,7 +7,7 @@
   <meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
   {%- set page_title = self.title() %}
   {%- set page_desc = self.description() %}
-  {%- set og_img = site.og_image or site.photo %}
+  {%- set og_img = site.og_image %}
   <meta name="author" content="{{ site.name }}">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#e8edf1" media="(prefers-color-scheme: light)">
