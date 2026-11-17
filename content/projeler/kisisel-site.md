@@ -13,11 +13,3 @@ Bu siteyi hazır bir site kurucu kullanmadan, Python ile yazdığım küçük bi
 programla üretiyorum. Yazılar ve projeler Markdown dosyası olarak duruyor;
 `build.py` bunları Jinja2 şablonlarıyla HTML sayfalarına çeviriyor ve
 GitHub Pages yayınlıyor.
-
-## Neler var?
-
-- Blog: tarih sıralama, okuma süresi, etiket sayfaları
-- Proje galerisi, Hakkımda ve indirilebilir CV
-- Açık ve koyu tema düğmesi
-- RSS beslemesi, sitemap ve paylaşım önizlemeleri (Open Graph)
-- Telefonda da düzgün görünen tasarım
