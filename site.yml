@@ -36,7 +36,6 @@ lanes:
 nav:
   - { text: "Hakkımda", href: "hakkimda/" }
   - { text: "Yazılar",  href: "blog/" }
-  - { text: "Projeler", href: "projeler/" }
   - { text: "İletişim", href: "iletisim/" }
 
 # Ana sayfadaki kısa link satırı

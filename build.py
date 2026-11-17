@@ -193,9 +193,11 @@ def build() -> None:
                title=f"Etiket: {tag}", items=tagged, tags=all_tags,
                tag_counts=tag_counts, current_tag=tag)
 
-    render("list.html", "projeler/index.html", title="Projeler", kind="projects",
-           intro="Üzerinde çalıştığım işler.",
-           items=projects, tags=[])
+    # Projeler sayfası sadece content/projeler/ içinde dosya varsa üretilir
+    if projects:
+        render("list.html", "projeler/index.html", title="Projeler", kind="projects",
+               intro="Üzerinde çalıştığım işler.",
+               items=projects, tags=[])
     for proj in projects:
         render("post.html", f"{proj.url}index.html", page=proj,
                newer=None, older=None)
@@ -224,7 +226,9 @@ def build() -> None:
               f'<atom:link href="{base_url}/feed.xml" rel="self" type="application/rss+xml"/>'
               + "".join(item(p) for p in posts) + "</channel></rss>")
         urls = [("", None), ("hakkimda/", None), ("iletisim/", None),
-                ("blog/", posts[0].date if posts else None), ("projeler/", None)]
+                ("blog/", posts[0].date if posts else None)]
+        if projects:
+            urls.append(("projeler/", None))
         urls += [(p.url, p.date) for p in posts + projects]
         urls += [(f"etiket/{slugify(t)}/", None) for t in all_tags]
         write("sitemap.xml",

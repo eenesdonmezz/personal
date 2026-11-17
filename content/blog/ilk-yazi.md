@@ -2,7 +2,7 @@
 title: "Merhaba, burası benim köşem"
 date: 2026-11-16
 description: "Bu sitede neler olacak."
-tags: [kişisel, web]
+tags: [kişisel]
 ---
 
 Uzun zamandır yaptığım işleri tek bir yerde toplamak istiyordum. Bu site
