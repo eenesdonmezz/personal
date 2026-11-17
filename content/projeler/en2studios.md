@@ -11,5 +11,3 @@ link_text: "en2studios.com"
 
 En2Studios'u arkadaşlarımla birlikte kurduk. Oyunlar, işletmeler için
 dijital ürünler ve web siteleri yapıyoruz. Şu an ilk oyunumuz geliştiriliyor.
-
-<p class="todo">Eklenecek: stüdyonun kuruluş yılı, öne çıkan işlerden birkaçı ve ekran görüntüleri.</p>

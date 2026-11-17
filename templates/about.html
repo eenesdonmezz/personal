@@ -12,17 +12,15 @@
     {% if site.photo %}<img class="portrait small" src="{{ root }}{{ site.photo }}" alt="{{ site.name }}">{% endif %}
   </div>
 
+  {% if site.cv_file %}
   <div class="cv-box">
     <div>
       <p class="cv-title">Özgeçmiş (CV)</p>
       <p class="muted">PDF olarak indir{% if site.cv and site.cv.updated %}, son güncelleme {{ site.cv.updated }}{% endif %}.</p>
     </div>
-    {% if site.cv_file %}
     <a class="button" href="{{ root }}{{ site.cv_file }}" download>CV'yi indir <span aria-hidden="true">↓</span></a>
-    {% else %}
-    <span class="button disabled" aria-disabled="true">CV yakında</span>
-    {% endif %}
   </div>
+  {% endif %}
 
   <div class="prose">{{ page.html | safe }}</div>
 </article>

@@ -40,7 +40,7 @@ python build.py --serve    # http://localhost:8000 adresinde canlı önizleme
 | `content/index.md` | Ana sayfadaki tanıtım yazısı |
 | `content/hakkimda.md` | Hakkımda sayfası |
 | `content/iletisim.md` | İletişim sayfasının giriş yazısı |
-| `static/cv/enes-donmez-cv.pdf` | İndirilebilir CV (şimdilik yer tutucu) |
+| `static/cv/enes-donmez-cv.pdf` | İndirilebilir CV (dosya konunca Hakkımda'da düğme çıkar) |
 | `content/blog/*.md` | Blog yazıları |
 | `content/projeler/*.md` | Projeler |
 | `templates/` | Jinja2 HTML şablonları |

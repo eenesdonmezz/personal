@@ -15,8 +15,8 @@ base_url: "https://eenesdonmezz.github.io/personal"
 # Boş bırakılırsa profil fotoğrafı kullanılır.
 og_image: ""
 
-# CV dosyası. Şimdilik bir yer tutucu PDF var; gerçek CV'ni aynı adla
-# static/cv/ klasörüne koyman yeterli.
+# CV dosyası. Gerçek CV'ni bu adla static/cv/ klasörüne koyunca
+# Hakkımda sayfasında indirme düğmesi kendiliğinden çıkar.
 cv:
   file: "static/cv/enes-donmez-cv.pdf"
   updated: ""          # örn. "Kasım 2026"; boşsa gösterilmez

@@ -9,8 +9,6 @@ okuyorum, şu an ikinci sınıftayım.
 Bunun dışında arkadaşlarımla kurduğumuz En2Studios'ta oyunlar ve dijital
 ürünler geliştiriyorum.
 
-<p class="todo">Eklenecek: kendini anlatan 2-3 cümle daha (nerelisin, neden sosyal hizmet, boş zamanlarında ne yaparsın). Bu kutuyu <code>content/hakkimda.md</code> içinden silebilirsin.</p>
-
 ## Eğitim
 
 **Sosyal Hizmet, lisans.** İstanbul Sabahattin Zaim Üniversitesi,
@@ -23,13 +21,9 @@ Bunun dışında arkadaşlarımla kurduğumuz En2Studios'ta oyunlar ve dijital
 **En2Studios, kurucu.** Oyunlar, işletmeler için dijital ürünler ve
 web siteleri. Şu an ilk oyunumuz geliştiriliyor.
 
-<p class="todo">Eklenecek: stüdyonun kuruluş yılı; varsa staj, gönüllülük ya da topluluk çalışmaları.</p>
-
 ## Beceriler
 
 - **İngilizce:** B1-B2 seviyesi (İngiltere'de dil eğitimi aldım)
-
-<p class="todo">Eklenecek: kullandığın araçlar ve programlar.</p>
 
 ## İlgilendiğim konular
 
