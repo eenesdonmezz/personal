@@ -45,8 +45,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ root }}static/style.css">
-  <script src="{{ root }}static/bg.js" defer></script>
+  <link rel="stylesheet" href="{{ root }}static/style.css?v={{ asset_v }}">
+  <script src="{{ root }}static/bg.js?v={{ asset_v }}" defer></script>
 </head>
 <body class="{% block body_class %}{% endblock %}">
   <canvas class="bg-field" aria-hidden="true"></canvas>
