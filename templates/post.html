@@ -19,7 +19,7 @@
   {% if page.meta.link %}<p class="post-meta"><a href="{{ page.meta.link }}">{{ page.meta.link_text or page.meta.link }}</a></p>{% endif %}
   {% if page.tags %}
   <ul class="tags" aria-label="Etiketler">
-    {% for t in page.tags %}<li><a href="{{ root }}etiket/{{ t | slugify }}/">#{{ t }}</a></li>{% endfor %}
+    {% for t in page.tags %}<li><a href="{{ root }}etiket/{{ t | slugify }}/">{{ t }}</a></li>{% endfor %}
   </ul>
   {% endif %}
   {% if page.meta.image %}<img class="cover" src="{{ root }}{{ page.meta.image }}" alt="">{% endif %}
