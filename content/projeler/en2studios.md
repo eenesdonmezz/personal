@@ -1,6 +1,6 @@
 ---
 title: "En2Studios"
-kind: "Stüdyo · Kurucu ortak"
+kind: "Stüdyo · Kurucu"
 description: "Arkadaşlarımla kurduğum stüdyo: Roblox oyunları, işletmeler için dijital ürünler ve web siteleri."
 side: "yellow"
 order: 1
@@ -12,4 +12,4 @@ link_text: "en2studios.com"
 En2Studios'u arkadaşlarımla birlikte kurduk. Roblox oyunları, işletmeler
 için dijital ürünler ve web siteleri geliştiriyoruz.
 
-<p class="todo">Eklenecek: stüdyonun kuruluş yılı, ekipteki rolün, öne çıkan işlerinizden birkaçı ve ekran görüntüleri.</p>
+<p class="todo">Eklenecek: stüdyonun kuruluş yılı, öne çıkan işlerden birkaçı ve ekran görüntüleri.</p>

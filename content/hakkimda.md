@@ -1,6 +1,6 @@
 ---
 title: "Hakkımda"
-description: "Enes Dönmez: İZÜ Sosyal Hizmet öğrencisi, En2Studios kurucu ortağı. Eğitim, çalışmalar ve CV."
+description: "Enes Dönmez: İZÜ Sosyal Hizmet öğrencisi, En2Studios kurucusu. Eğitim, çalışmalar ve CV."
 ---
 
 Ben Enes Dönmez. İstanbul Sabahattin Zaim Üniversitesi'nde Sosyal Hizmet
@@ -16,20 +16,23 @@ tasarlayarak cevaplamaya çalışıyorum.
 
 ## Eğitim
 
-**Sosyal Hizmet, lisans.** İstanbul Sabahattin Zaim Üniversitesi, 2. sınıf
+**Sosyal Hizmet, lisans.** İstanbul Sabahattin Zaim Üniversitesi,
+2024'ten beri, şu an 2. sınıf
 
-<p class="todo">Eklenecek: başlangıç yılı, varsa lise, aldığın önemli dersler ya da sertifikalar.</p>
+**İngilizce dil eğitimi.** İngiltere, bir aydan biraz uzun süren kurs
 
 ## Çalışmalar
 
-**En2Studios, kurucu ortak.** Roblox oyunları, işletmeler için dijital
+**En2Studios, kurucu.** Roblox oyunları, işletmeler için dijital
 ürünler ve web siteleri.
 
-<p class="todo">Eklenecek: stüdyodaki rolün, başlangıç tarihi; varsa staj, gönüllülük ya da topluluk çalışmaları.</p>
+<p class="todo">Eklenecek: stüdyonun kuruluş yılı; varsa staj, gönüllülük ya da topluluk çalışmaları.</p>
 
 ## Beceriler
 
-<p class="todo">Eklenecek: diller (örn. İngilizce seviyesi), kullandığın araçlar ve programlar.</p>
+- **İngilizce:** B1-B2 seviyesi (İngiltere'de dil eğitimi aldım)
+
+<p class="todo">Eklenecek: kullandığın araçlar ve programlar.</p>
 
 ## İlgilendiğim konular
 

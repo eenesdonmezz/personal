@@ -4,7 +4,7 @@ name: "Enes Dönmez"
 first_name: "Enes"
 last_name: "Dönmez"     # içindeki "ö" ana sayfada iki renkli noktayla çizilir
 handle: "enes dönmez"
-description: "Enes Dönmez: İZÜ Sosyal Hizmet öğrencisi ve En2Studios kurucu ortağı."
+description: "Enes Dönmez: İZÜ Sosyal Hizmet öğrencisi ve En2Studios kurucusu."
 # Fotoğraf: proje klasörüne "profil.jpg" (veya .png/.webp) koyman yeterli.
 
 # GitHub Pages adresi (RSS, sitemap ve paylaşım önizlemeleri için).
@@ -30,7 +30,7 @@ lanes:
   - color: "yellow"
     place: "Stüdyoda"
     title: "En2Studios"
-    detail: "Kurucu ortak. Oyunlar ve dijital ürünler"
+    detail: "Kurucu. Oyunlar ve dijital ürünler"
     href: "https://www.en2studios.com"
 
 nav:
@@ -41,7 +41,9 @@ nav:
 
 # Ana sayfadaki kısa link satırı
 links:
-  - { text: "GitHub",  href: "https://github.com/eddonmez3466-oss" }
+  - { text: "GitHub",  href: "https://github.com/eenesdonmezz" }
+  - { text: "LinkedIn", href: "https://www.linkedin.com/in/enes-d%C3%B6nmez-78242a3a4/" }
+  - { text: "Instagram", href: "https://www.instagram.com/enesdnmz7/" }
   - { text: "En2Studios", href: "https://www.en2studios.com" }
   - { text: "E-posta", href: "mailto:ed.donmez3466@gmail.com" }
 
@@ -49,9 +51,9 @@ links:
 # adresi yazınca kendiliğinden link olur. İstemediğin satırı silebilirsin.
 contact:
   - { name: "E-posta",    handle: "ed.donmez3466@gmail.com", href: "mailto:ed.donmez3466@gmail.com" }
-  - { name: "GitHub",     handle: "eddonmez3466-oss",        href: "https://github.com/eddonmez3466-oss" }
+  - { name: "GitHub",     handle: "eenesdonmezz",            href: "https://github.com/eenesdonmezz" }
   - { name: "En2Studios", handle: "en2studios.com",          href: "https://www.en2studios.com" }
-  - { name: "LinkedIn",   handle: "",                        href: "" }
-  - { name: "Instagram",  handle: "",                        href: "" }
+  - { name: "LinkedIn",   handle: "Enes Dönmez",             href: "https://www.linkedin.com/in/enes-d%C3%B6nmez-78242a3a4/" }
+  - { name: "Instagram",  handle: "@enesdnmz7",               href: "https://www.instagram.com/enesdnmz7/" }
 
 email: "ed.donmez3466@gmail.com"
