@@ -444,7 +444,7 @@ a.contact-card:hover .contact-name { color: var(--blue); }
   100% { transform: translate(-3%, -2%) scale(1.02); }
 }
 /* Geniş ışık katmanı yatay kaydırma çubuğu çıkarmasın */
-body { overflow-x: hidden; }
+html, body { overflow-x: clip; }
 
 /* ---------- Dil düğmesi (TR / EN) ---------- */
 .lang-switch {
@@ -456,3 +456,8 @@ body { overflow-x: hidden; }
 }
 .lang-switch:hover { border-color: var(--blue); color: var(--blue); }
 @media (max-width: 760px) { .nav-right nav { flex: 1; } }
+
+/* Soyadı hiçbir genişlikte bölünmesin: satır kırılmaz, yazı boyutu
+   başlığın genişliğine göre küçülür ("Dönmez" ≈ 3.4-3.7em genişliğinde). */
+.name { container-type: inline-size; }
+.name-line { white-space: nowrap; font-size: min(1em, 25cqi); }
