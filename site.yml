@@ -62,7 +62,7 @@ email: "ed.donmez3466@gmail.com"
 # years boşsa yazılmaz; current: true olan satır "devam ediyor" diye işaretlenir.
 education:
   - { title: "Sosyal Hizmet, Lisans", place: "İstanbul Sabahattin Zaim Üniversitesi", years: "2024 – devam ediyor", detail: "2. sınıf", current: true }
-  - { title: "İngilizce Dil Eğitimi", place: "İngiltere", years: "", detail: "Bir aydan uzun süren yoğun dil programı" }
+  - { title: "İngilizce Dil Eğitimi", place: "EC English, İngiltere", years: "", detail: "Bir aydan uzun süren yoğun dil programı · A2 sertifikası" }
   - { title: "Ortaokul ve Lise", place: "Biltek Koleji", years: "" }
   - { title: "İlkokul", place: "Devran Koleji", years: "" }
 
@@ -93,7 +93,7 @@ en:
     - { text: "Email", href: "mailto:ed.donmez3466@gmail.com" }
   education:
     - { title: "Social Work, BA", place: "Istanbul Sabahattin Zaim University", years: "2024 – present", detail: "2nd year", current: true }
-    - { title: "English Language Course", place: "England", years: "", detail: "Intensive language programme of just over a month" }
+    - { title: "English Language Course", place: "EC English, England", years: "", detail: "Intensive language programme of just over a month · A2 certificate" }
     - { title: "Middle School and High School", place: "Biltek College", years: "" }
     - { title: "Primary School", place: "Devran College", years: "" }
   contact:

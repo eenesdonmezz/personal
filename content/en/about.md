@@ -25,7 +25,11 @@ development. [Project page](../projects/en2studios/)
 
 ## Skills
 
-- **English:** B1-B2 level (language course in England)
+- **English:** B1-B2 level
+
+## Certificates
+
+- **English, A2 level.** EC English, England
 
 ## Interests
 

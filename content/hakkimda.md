@@ -25,7 +25,11 @@ oyunumuz geliştirme aşamasında. [Proje sayfası](../projeler/en2studios/)
 
 ## Beceriler
 
-- **İngilizce:** B1-B2 seviyesi (İngiltere'de dil eğitimi)
+- **İngilizce:** B1-B2 seviyesi
+
+## Sertifikalar
+
+- **İngilizce, A2 seviyesi.** EC English, İngiltere
 
 ## İlgi alanları
 
