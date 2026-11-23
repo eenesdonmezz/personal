@@ -3,7 +3,7 @@ title: "About"
 description: "Enes Dönmez: Social Work student at İZÜ and founder of En2Studios. Education, work and CV."
 ---
 
-Hi, I'm Enes. I'm a second-year Social Work student at Istanbul Sabahattin
+Hi, I'm Enes. I was born on 28 September 2007. I'm a second-year Social Work student at Istanbul Sabahattin
 Zaim University. Alongside my studies, I love learning new things and
 gaining different experiences.
 
@@ -22,6 +22,10 @@ Enjoy reading!
 since 2024, currently in my 2nd year
 
 **English language course.** England, a course of a little over a month
+
+**Middle school and high school.** Biltek College
+
+**Primary school.** Devran College
 
 ## Work
 

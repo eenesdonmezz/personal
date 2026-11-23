@@ -3,7 +3,7 @@ title: "Hakkımda"
 description: "Enes Dönmez: İZÜ Sosyal Hizmet öğrencisi, En2Studios kurucusu. Eğitim, çalışmalar ve CV."
 ---
 
-Merhaba, ben Enes. İstanbul Sabahattin Zaim Üniversitesi'nde Sosyal Hizmet
+Merhaba, ben Enes. 28 Eylül 2007'de doğdum. İstanbul Sabahattin Zaim Üniversitesi'nde Sosyal Hizmet
 2. sınıf öğrencisiyim. Okulun yanında yeni şeyler öğrenmeyi ve farklı
 deneyimler edinmeyi seviyorum.
 
@@ -22,6 +22,10 @@ Keyifli okumalar!
 2024'ten beri, şu an 2. sınıf
 
 **İngilizce dil eğitimi.** İngiltere, bir aydan biraz uzun süren kurs
+
+**Ortaokul ve lise.** Biltek Koleji
+
+**İlkokul.** Devran Koleji
 
 ## Çalışmalar
 
