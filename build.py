@@ -126,8 +126,7 @@ LANGS = {
         "about": "hakkimda", "contact": "iletisim", "blog": "blog", "tag": "etiket",
         "months": TR_MONTHS,
         "t": {
-            "skip": "İçeriğe geç", "menu": "Ana menü", "theme": "Tema",
-            "to_dark": "Koyu temaya geç", "to_light": "Açık temaya geç",
+            "skip": "İçeriğe geç", "menu": "Ana menü",
             "switch_label": "EN", "switch_title": "English",
             "footer_cta": "Bir fikrin ya da sorun varsa yaz:",
             "posts": "Yazılar", "see_all": "Hepsini gör", "projects": "Projeler",
@@ -148,8 +147,7 @@ LANGS = {
         "months": ["January", "February", "March", "April", "May", "June", "July",
                    "August", "September", "October", "November", "December"],
         "t": {
-            "skip": "Skip to content", "menu": "Main menu", "theme": "Theme",
-            "to_dark": "Switch to dark theme", "to_light": "Switch to light theme",
+            "skip": "Skip to content", "menu": "Main menu",
             "switch_label": "TR", "switch_title": "Türkçe",
             "footer_cta": "Have an idea or a question? Write to me:",
             "posts": "Posts", "see_all": "See all", "projects": "Projects",

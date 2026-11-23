@@ -6,9 +6,8 @@
   <title>Yazılar | Enes Dönmez</title>
   <meta name="description" content="Üniversite, teknoloji, hobiler ve seyahat üzerine yazılar.">
   <meta name="author" content="Enes Dönmez">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#e8edf1" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#111a2c" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#111a2c">
   <link rel="canonical" href="https://eenesdonmezz.github.io/personal/blog/">
   <link rel="alternate" hreflang="tr" href="https://eenesdonmezz.github.io/personal/blog/">
   <link rel="alternate" hreflang="en" href="https://eenesdonmezz.github.io/personal/en/blog/">
@@ -27,20 +26,12 @@
   <meta name="twitter:description" content="Üniversite, teknoloji, hobiler ve seyahat üzerine yazılar.">
   
 
-  
-  <script>
-    (function () {
-      var t = null;
-      try { t = localStorage.getItem("tema"); } catch (e) {}
-      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
-    })();
-  </script>
   <link rel="icon" href="../static/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../static/style.css?v=780b98a2">
-  <script src="../static/bg.js?v=780b98a2" defer></script>
+  <link rel="stylesheet" href="../static/style.css?v=7ad6e977">
+  <script src="../static/bg.js?v=7ad6e977" defer></script>
 </head>
 <body class="">
   <canvas class="bg-field" aria-hidden="true"></canvas>
@@ -52,10 +43,6 @@
         <a href="../hakkimda/">Hakkımda</a><a href="../blog/" aria-current="page">Yazılar</a><a href="../iletisim/">İletişim</a>
       </nav>
       <a class="lang-switch" href="../en/blog/" hreflang="en" lang="en" title="English" data-lang="en">EN</a>
-      <button class="theme-toggle" type="button" aria-label="Koyu temaya geç" title="Tema" data-dark="Koyu temaya geç" data-light="Açık temaya geç">
-        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
-        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
-      </button>
     </div>
   </header>
 
@@ -95,27 +82,5 @@
       <p class="footer-meta">© 2026 Enes Dönmez.</p>
     </div>
   </footer>
-
-  <script>
-    (function () {
-      var root = document.documentElement;
-      var btn = document.querySelector(".theme-toggle");
-      var media = window.matchMedia("(prefers-color-scheme: dark)");
-      function current() { return root.getAttribute("data-theme") || (media.matches ? "dark" : "light"); }
-      function label() {
-        var dark = current() === "dark";
-        btn.setAttribute("aria-label", dark ? btn.dataset.light : btn.dataset.dark);
-        btn.setAttribute("aria-pressed", dark ? "true" : "false");
-      }
-      btn.addEventListener("click", function () {
-        var next = current() === "dark" ? "light" : "dark";
-        root.setAttribute("data-theme", next);
-        try { localStorage.setItem("tema", next); } catch (e) {}
-        label();
-      });
-      if (media.addEventListener) media.addEventListener("change", label);
-      label();
-    })();
-  </script>
 </body>
 </html>

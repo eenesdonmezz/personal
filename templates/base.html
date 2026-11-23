@@ -9,9 +9,8 @@
   {%- set page_desc = self.description() %}
   {%- set og_img = site.og_image %}
   <meta name="author" content="{{ site.name }}">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#e8edf1" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#111a2c" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#111a2c">
   {% if canonical %}<link rel="canonical" href="{{ canonical }}">
   <link rel="alternate" hreflang="{{ lang }}" href="{{ canonical }}">{% endif %}
   {% if alt_url %}<link rel="alternate" hreflang="{{ alt_lang }}" href="{{ alt_url }}">{% endif %}
@@ -33,14 +32,6 @@
   <meta name="twitter:description" content="{{ page_desc }}">
   {% block jsonld %}{% endblock %}
 
-  {# Temayı sayfa çizilmeden önce uygula: yanıp sönme olmasın #}
-  <script>
-    (function () {
-      var t = null;
-      try { t = localStorage.getItem("tema"); } catch (e) {}
-      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
-    })();
-  </script>
   <link rel="icon" href="{{ root }}static/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,10 +49,6 @@
         {% for item in site.nav %}<a href="{{ root }}{{ item.href }}"{% if path and path.startswith(item.href) %} aria-current="page"{% endif %}>{{ item.text }}</a>{% endfor %}
       </nav>
       {% if alt is not none %}<a class="lang-switch" href="{{ root }}{{ alt }}" hreflang="{{ alt_lang }}" lang="{{ alt_lang }}" title="{{ tx.switch_title }}" data-lang="{{ alt_lang }}">{{ tx.switch_label }}</a>{% endif %}
-      <button class="theme-toggle" type="button" aria-label="{{ tx.to_dark }}" title="{{ tx.theme }}" data-dark="{{ tx.to_dark }}" data-light="{{ tx.to_light }}">
-        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
-        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
-      </button>
     </div>
   </header>
 
@@ -74,27 +61,5 @@
       <p class="footer-meta">© {{ year }} {{ site.name }}.</p>
     </div>
   </footer>
-
-  <script>
-    (function () {
-      var root = document.documentElement;
-      var btn = document.querySelector(".theme-toggle");
-      var media = window.matchMedia("(prefers-color-scheme: dark)");
-      function current() { return root.getAttribute("data-theme") || (media.matches ? "dark" : "light"); }
-      function label() {
-        var dark = current() === "dark";
-        btn.setAttribute("aria-label", dark ? btn.dataset.light : btn.dataset.dark);
-        btn.setAttribute("aria-pressed", dark ? "true" : "false");
-      }
-      btn.addEventListener("click", function () {
-        var next = current() === "dark" ? "light" : "dark";
-        root.setAttribute("data-theme", next);
-        try { localStorage.setItem("tema", next); } catch (e) {}
-        label();
-      });
-      if (media.addEventListener) media.addEventListener("change", label);
-      label();
-    })();
-  </script>
 </body>
 </html>

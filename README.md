@@ -13,7 +13,7 @@ Python ile yazılmış küçük bir statik site üreticisiyle yapılan kişisel 
 - İki dil: Türkçe kökte, İngilizce `/en/` altında; menüdeki TR/EN düğmesi aynı sayfanın diğer diline gider
 - Sitemap (`site.yml` içinde `base_url` verilince)
 - SEO: canonical link, Open Graph / X paylaşım önizlemeleri, schema.org verisi
-- Açık / koyu tema: sistem ayarına uyar, menüdeki düğmeyle değiştirilir ve hatırlanır
+- Her zaman koyu mavi tema
 - Mobil uyumlu tasarım
 - `sample: true` olan yazı ve projeler "Örnek" rozetiyle gösterilir
 - Yerel önizleme sunucusu: dosya kaydedince site kendini yeniden üretir
