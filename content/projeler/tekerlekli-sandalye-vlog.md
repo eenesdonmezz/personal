@@ -1,7 +1,7 @@
 ---
 title: "Tekerlekli Sandalye Vlog"
 kind: "İçerik üreticisi · Instagram ve TikTok"
-description: "Tekerlekli sandalye kullanıcısı olarak günlük hayatı, seyahati ve erişilebilirliği anlatan videolar. TikTok ve Instagram'da 1,2 milyondan fazla izlenme."
+description: "Tekerlekli sandalye kullanıcısı olarak günlük hayatı, seyahati ve erişilebilirliği anlatan videolar."
 side: blue
 image: "static/img/projeler/vlog.svg"
 order: 2
@@ -13,8 +13,6 @@ Instagram ve TikTok'ta tekerlekli sandalye kullanıcısı olarak günlük
 hayatımı, seyahatlerimi ve karşılaştığım erişilebilirlik deneyimlerini
 paylaşıyorum. Amacım, engelli bireylerin hayatını kolaylaştıran ya da
 zorlaştıran şeyleri görünür kılmak ve farkındalık oluşturmak.
-
-> Erişilebilirlik bir ayrıcalık değil, herkesin hakkıdır.
 
 ## Rakamlar
 
