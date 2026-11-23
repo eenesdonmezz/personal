@@ -19,7 +19,7 @@ og_image: ""
 # Hakkımda sayfasında indirme düğmesi kendiliğinden çıkar.
 cv:
   file: "static/cv/enes-donmez-cv.pdf"
-  updated: ""          # örn. "Kasım 2026"; boşsa gösterilmez
+  updated: "Kasım 2026"  # örn. "Kasım 2026"; boşsa gösterilmez
 
 # Ana sayfadaki iki alan. Renkler "ö"nün noktalarıyla eşleşir.
 lanes:

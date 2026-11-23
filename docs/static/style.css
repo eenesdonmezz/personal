@@ -287,6 +287,7 @@ a.lane-title:hover { text-decoration: underline; text-decoration-color: var(--ye
 .footer-inner { max-width: var(--wrap); margin: 0 auto; padding: clamp(2.5rem, 6vw, 4rem) var(--gutter) 2rem; }
 .footer-cta { font-family: var(--display); font-weight: 700; font-size: clamp(1.4rem, 3.5vw, 2.2rem); line-height: 1.2; margin: 0 0 2.5rem; letter-spacing: -.02em; }
 .footer-cta a { color: var(--yellow); overflow-wrap: anywhere; }
+.footer-a11y { margin: 0 0 1rem; font-size: .95rem; max-width: 60ch; opacity: .85; }
 .footer-meta { margin: 0; font-size: .95rem; opacity: .75; }
 
 /* ---------- Mobil ---------- */
