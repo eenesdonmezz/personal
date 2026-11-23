@@ -7,6 +7,10 @@ Ben Enes Dönmez. 28 Eylül 2007'de İstanbul Gaziosmanpaşa'da doğdum. İstanb
 Üniversitesi Sosyal Hizmet bölümünde 2. sınıf öğrencisiyim ve oyun ve
 dijital ürün stüdyosu En2Studios'un kurucusuyum.
 
+Ulrich Konjenital Müsküler Distrofi (Kollajen VI ile ilişkili) ile
+yaşıyorum ve akülü tekerlekli sandalye kullanıyorum. Bu deneyim bana
+erişilebilirliğin bir ayrıcalık değil, herkesin hakkı olduğunu öğretti.
+
 Sosyal hizmet eğitimimin yanında teknoloji ve yazılımla ilgileniyorum.
 En2Studios'ta oyunlar, işletmeler için dijital ürünler ve web siteleri
 üzerinde çalışıyoruz. Yeni şeyler öğrenmeye ve farklı deneyimler edinmeye
