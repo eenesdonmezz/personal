@@ -37,7 +37,7 @@ TikTok and Instagram have been viewed more than 1.2 million times in total.
 ## Certificates
 
 - **English, A2 level.** EC English, England
-- **English preparatory programme, A1 level.** Istanbul Sabahattin Zaim University
+- **Elective English course, A1 level (successfully completed).** Istanbul Sabahattin Zaim University
 
 ## Interests
 

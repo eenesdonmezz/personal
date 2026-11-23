@@ -85,7 +85,7 @@ videos:
 # years boşsa yazılmaz; current: true olan satır "devam ediyor" diye işaretlenir.
 education:
   - { title: "Sosyal Hizmet, Lisans", place: "İstanbul Sabahattin Zaim Üniversitesi", years: "2024 – devam ediyor", detail: "2. sınıf", current: true }
-  - { title: "İngilizce Hazırlık Programı", place: "İstanbul Sabahattin Zaim Üniversitesi", years: "", detail: "A1 seviyesi tamamlandı" }
+  - { title: "Seçmeli İngilizce Dersi", place: "İstanbul Sabahattin Zaim Üniversitesi", years: "", detail: "A1 seviyesi, başarıyla tamamlandı" }
   - { title: "İngilizce Dil Eğitimi", place: "EC English, İngiltere", years: "", detail: "Bir aydan uzun süren yoğun dil programı · A2 sertifikası" }
   - { title: "Ortaokul ve Lise", place: "Biltek Koleji", years: "" }
   - { title: "İlkokul", place: "Devran Koleji", years: "" }
@@ -138,7 +138,7 @@ en:
         - { platform: "TikTok", href: "https://www.tiktok.com/@enesdnmz8/video/7645294520191503634" }
   education:
     - { title: "Social Work, BA", place: "Istanbul Sabahattin Zaim University", years: "2024 – present", detail: "2nd year", current: true }
-    - { title: "English Preparatory Programme", place: "Istanbul Sabahattin Zaim University", years: "", detail: "Completed A1 level" }
+    - { title: "Elective English Course", place: "Istanbul Sabahattin Zaim University", years: "", detail: "A1 level, successfully completed" }
     - { title: "English Language Course", place: "EC English, England", years: "", detail: "Intensive language programme of just over a month · A2 certificate" }
     - { title: "Middle School and High School", place: "Biltek College", years: "" }
     - { title: "Primary School", place: "Devran College", years: "" }

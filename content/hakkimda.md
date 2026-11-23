@@ -37,7 +37,7 @@ videolar toplam 1,2 milyondan fazla izlendi. [Proje sayfası](../projeler/tekerl
 ## Sertifikalar
 
 - **İngilizce, A2 seviyesi.** EC English, İngiltere
-- **İngilizce hazırlık, A1 seviyesi.** İstanbul Sabahattin Zaim Üniversitesi
+- **Seçmeli İngilizce dersi, A1 seviyesi (başarıyla tamamlandı).** İstanbul Sabahattin Zaim Üniversitesi
 
 ## İlgi alanları
 
