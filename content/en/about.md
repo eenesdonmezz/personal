@@ -7,6 +7,10 @@ I'm Enes Dönmez, born on 28 September 2007 in Gaziosmanpaşa, Istanbul. I'm a s
 student at Istanbul Sabahattin Zaim University and the founder of
 En2Studios, a game and digital product studio.
 
+I live with Ulrich Congenital Muscular Dystrophy (Collagen VI-related) and
+use a powered wheelchair. This has taught me that accessibility is not a
+privilege but everyone's right.
+
 Alongside my social work studies, I'm interested in technology and
 software. At En2Studios we work on games, digital products for businesses
 and websites. I'm always open to learning new things and gaining new
