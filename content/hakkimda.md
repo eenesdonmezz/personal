@@ -30,6 +30,7 @@ oyunumuz geliştirme aşamasında. [Proje sayfası](../projeler/en2studios/)
 ## Sertifikalar
 
 - **İngilizce, A2 seviyesi.** EC English, İngiltere
+- **İngilizce hazırlık, A1 seviyesi.** İstanbul Sabahattin Zaim Üniversitesi
 
 ## İlgi alanları
 

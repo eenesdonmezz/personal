@@ -30,6 +30,7 @@ development. [Project page](../projects/en2studios/)
 ## Certificates
 
 - **English, A2 level.** EC English, England
+- **English preparatory programme, A1 level.** Istanbul Sabahattin Zaim University
 
 ## Interests
 
