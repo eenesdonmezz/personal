@@ -1,7 +1,7 @@
 ---
 title: "Wheelchair Vlog"
 kind: "Content creator · Instagram and TikTok"
-description: "Videos about daily life, travel and accessibility as a wheelchair user. More than 1.2 million views on TikTok and Instagram."
+description: "Videos about daily life, travel and accessibility as a wheelchair user."
 side: blue
 image: "static/img/projeler/vlog.svg"
 order: 2
@@ -13,8 +13,6 @@ On Instagram and TikTok I share my daily life, my travels and the
 accessibility situations I come across as a wheelchair user. My aim is to
 make visible what makes life easier or harder for disabled people, and to
 raise awareness.
-
-> Accessibility is not a privilege; it is everyone's right.
 
 ## In numbers
 

@@ -28,20 +28,13 @@ games, digital products for businesses and websites. Our first game is in
 development. [Project page](../projects/en2studios/)
 
 **Content creator, Wheelchair Vlog.** On Instagram and TikTok I make videos
-about daily life, travel and accessibility as a wheelchair user. My videos on
-TikTok and Instagram have been viewed more than 1.2 million times in total.
+about daily life, travel and accessibility as a wheelchair user.
 [Project page](../projects/tekerlekli-sandalye-vlog/)
 
 ## Skills
 
 - **English:** B1 level (EC English A2 certificate)
 - **Tools:** Microsoft Office, Canva, Unity, Roblox Studio
-- **Content creation:** accessibility and disability awareness videos on Instagram and TikTok
-
-## Certificates
-
-- **English, A2 level.** EC English, England
-- **Elective English course, A1 level (successfully completed).** Istanbul Sabahattin Zaim University
 
 ## Interests
 
@@ -49,8 +42,3 @@ TikTok and Instagram have been viewed more than 1.2 million times in total.
 - Game design and development
 - Technology and software
 - Reading and travelling
-
-## Contact
-
-For collaborations and applications, you can reach me through the channels
-on the [Contact](../contact/) page.
