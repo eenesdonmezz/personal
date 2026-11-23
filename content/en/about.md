@@ -3,7 +3,7 @@ title: "About"
 description: "Enes Dönmez: Social Work student at İZÜ and founder of En2Studios. Education, experience and CV."
 ---
 
-I'm Enes Dönmez, born on 28 September 2007. I'm a second-year Social Work
+I'm Enes Dönmez, born on 28 September 2007 in Gaziosmanpaşa, Istanbul. I'm a second-year Social Work
 student at Istanbul Sabahattin Zaim University and the founder of
 En2Studios, a game and digital product studio.
 
@@ -23,9 +23,16 @@ valuable of them.
 games, digital products for businesses and websites. Our first game is in
 development. [Project page](../projects/en2studios/)
 
+**Content creator, Wheelchair Vlog.** On Instagram and TikTok I make videos
+about daily life, travel and accessibility as a wheelchair user. My TikTok
+videos have been viewed more than 850,000 times in total.
+[Project page](../projects/tekerlekli-sandalye-vlog/)
+
 ## Skills
 
-- **English:** B1-B2 level
+- **English:** B1 level (EC English A2 certificate)
+- **Tools:** Microsoft Office, Canva, Unity, Roblox Studio
+- **Content creation:** accessibility and disability awareness videos on Instagram and TikTok
 
 ## Certificates
 

@@ -3,7 +3,7 @@ title: "Hakkımda"
 description: "Enes Dönmez: İZÜ Sosyal Hizmet öğrencisi, En2Studios kurucusu. Eğitim, deneyim ve CV."
 ---
 
-Ben Enes Dönmez. 28 Eylül 2007'de doğdum. İstanbul Sabahattin Zaim
+Ben Enes Dönmez. 28 Eylül 2007'de İstanbul Gaziosmanpaşa'da doğdum. İstanbul Sabahattin Zaim
 Üniversitesi Sosyal Hizmet bölümünde 2. sınıf öğrencisiyim ve oyun ve
 dijital ürün stüdyosu En2Studios'un kurucusuyum.
 
@@ -23,9 +23,16 @@ biri oldu.
 işletmeler için dijital ürünler ve web siteleri geliştiriyoruz. İlk
 oyunumuz geliştirme aşamasında. [Proje sayfası](../projeler/en2studios/)
 
+**İçerik üreticisi, Tekerlekli Sandalye Vlog.** Instagram ve TikTok'ta
+tekerlekli sandalye kullanıcısı olarak günlük hayatı, seyahati ve
+erişilebilirliği anlatan videolar üretiyorum. TikTok'taki videolar toplam
+850 binden fazla izlendi. [Proje sayfası](../projeler/tekerlekli-sandalye-vlog/)
+
 ## Beceriler
 
-- **İngilizce:** B1-B2 seviyesi
+- **İngilizce:** B1 seviyesi (EC English A2 sertifikası)
+- **Kullandığım araçlar:** Microsoft Office, Canva, Unity, Roblox Studio
+- **İçerik üretimi:** Instagram ve TikTok'ta erişilebilirlik ve engellilik farkındalığı videoları
 
 ## Sertifikalar
 

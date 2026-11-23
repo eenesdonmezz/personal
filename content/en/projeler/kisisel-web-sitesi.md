@@ -5,7 +5,7 @@ year: 2026
 description: "A bilingual, accessible and fast personal portfolio built with a static site generator written in Python."
 side: blue
 image: "static/img/projeler/kisisel-web-sitesi.webp"
-order: 2
+order: 3
 link: "https://github.com/eenesdonmezz/personal"
 link_text: "Source code (GitHub)"
 ---

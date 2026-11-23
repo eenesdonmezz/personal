@@ -118,7 +118,6 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
   align-items: end;
   gap: clamp(1.5rem, 4vw, 3rem);
 }
-picture { display: contents; }  /* fotoğraf düzende doğrudan img gibi davranır */
 .portrait {
   width: clamp(150px, 22vw, 240px);
   height: auto;
@@ -246,6 +245,21 @@ a.lane-title:hover { text-decoration: underline; text-decoration-color: var(--ye
 .pager a { text-decoration: none; font-weight: 700; color: var(--ink); }
 .pager small { display: block; font-weight: 400; color: var(--muted); }
 .pager-next { text-align: right; }
+
+/* ---------- Öne çıkan videolar ---------- */
+.block-intro { color: var(--muted); max-width: 60ch; margin: -.5rem 0 1.5rem; }
+.videos { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.video a {
+  height: 100%; display: grid; grid-template-rows: auto 1fr auto; gap: .6rem;
+  padding: 1.4rem 1.4rem 1.2rem; text-decoration: none; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line); border-top: 6px solid var(--yellow); border-radius: 10px;
+}
+.video a:hover { border-color: var(--ink); border-top-color: var(--yellow); }
+@media (prefers-reduced-motion: no-preference) { .video a:hover { transform: translateY(-3px); } }
+.video-views { color: var(--muted); font-size: 1rem; }
+.video-views strong { display: block; font-family: var(--display); font-size: clamp(2.4rem, 5vw, 3.2rem); font-weight: 800; letter-spacing: -.03em; line-height: 1; color: var(--yellow); }
+.video-title { font-family: var(--display); font-weight: 700; font-size: 1.2rem; line-height: 1.25; }
+.video-platform { color: var(--blue); font-weight: 700; font-size: .95rem; }
 
 /* ---------- Eğitim zaman çizelgesi ---------- */
 .timeline { list-style: none; margin: 1.25rem 0 2rem; padding: 0; position: relative; }

@@ -9,7 +9,7 @@
 <article class="article about">
   <div class="about-head">
     <h1>{{ page.title }}</h1>
-    {% if site.photo %}<picture>{% if site.photo_webp %}<source srcset="{{ root }}{{ site.photo_webp }}" type="image/webp">{% endif %}<img class="portrait small" src="{{ root }}{{ site.photo }}" alt="{{ site.name }}"{% if site.photo_size %} width="{{ site.photo_size[0] }}" height="{{ site.photo_size[1] }}"{% endif %} fetchpriority="high"></picture>{% endif %}
+    {% if site.photo %}<img class="portrait small" src="{{ root }}{{ site.photo_webp or site.photo }}" alt="{{ site.name }}"{% if site.photo_size %} width="{{ site.photo_size[0] }}" height="{{ site.photo_size[1] }}"{% endif %} fetchpriority="high">{% endif %}
   </div>
 
   {% if site.cv_file %}

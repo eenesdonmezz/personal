@@ -5,7 +5,7 @@ year: 2026
 description: "Python ile yazılmış statik site üreticisiyle hazırlanan, iki dilli, erişilebilir ve hızlı kişisel portfolyo."
 side: blue
 image: "static/img/projeler/kisisel-web-sitesi.webp"
-order: 2
+order: 3
 link: "https://github.com/eenesdonmezz/personal"
 link_text: "Kaynak kodu (GitHub)"
 ---

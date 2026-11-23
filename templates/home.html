@@ -11,7 +11,7 @@
       <span class="name-line" aria-hidden="true">{{ site.first_name }}</span>
       <span class="name-line" aria-hidden="true">{{ site.last_name | umlaut }}</span>
     </h1>
-    {% if site.photo %}<picture>{% if site.photo_webp %}<source srcset="{{ root }}{{ site.photo_webp }}" type="image/webp">{% endif %}<img class="portrait" src="{{ root }}{{ site.photo }}" alt="{{ site.name }}"{% if site.photo_size %} width="{{ site.photo_size[0] }}" height="{{ site.photo_size[1] }}"{% endif %} fetchpriority="high"></picture>{% endif %}
+    {% if site.photo %}<img class="portrait" src="{{ root }}{{ site.photo_webp or site.photo }}" alt="{{ site.name }}"{% if site.photo_size %} width="{{ site.photo_size[0] }}" height="{{ site.photo_size[1] }}"{% endif %} fetchpriority="high">{% endif %}
   </div>
 
   <div class="hero-body">
@@ -35,6 +35,27 @@
     </ul>
   </div>
 </section>
+
+{% if site.videos %}
+<section class="block">
+  <header class="block-head">
+    <h2>{{ site.videos_title }}</h2>
+    {% if site.videos_more %}<a href="{{ root }}{{ site.videos_more.href }}">{{ site.videos_more.text }}</a>{% endif %}
+  </header>
+  {% if site.videos_intro %}<p class="block-intro">{{ site.videos_intro }}</p>{% endif %}
+  <ul class="videos">
+    {% for v in site.videos %}
+    <li class="video">
+      <a href="{{ v.href }}">
+        <span class="video-views"><strong>{{ v.views }}</strong> {{ v.label }}</span>
+        <span class="video-title">{{ v.title }}</span>
+        <span class="video-platform">{{ v.platform }} <span aria-hidden="true">↗</span></span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
 
 {% if projects %}
 <section class="block">
