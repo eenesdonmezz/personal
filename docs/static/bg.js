@@ -116,12 +116,6 @@
   document.addEventListener("visibilitychange", start);
   if (still.addEventListener) still.addEventListener("change", start);
 
-  // tema değişince renkleri yeniden oku
-  new MutationObserver(function () { readColors(); if (!running) draw(0); })
-    .observe(root, { attributes: true, attributeFilter: ["data-theme"] });
-  var darkMq = window.matchMedia("(prefers-color-scheme: dark)");
-  if (darkMq.addEventListener) darkMq.addEventListener("change", function () { readColors(); });
-
   readColors();
   resize();
   start();

@@ -3,43 +3,7 @@
    Mavi = sosyal hizmet (okul), sarı = En2Studios (stüdyo). */
 
 :root {
-  --bg: #e8edf1;
-  --surface: #f7f9fa;
-  --ink: #15203a;
-  --muted: #56627a;
-  --line: #cdd5de;
-  --blue: #2f4bdb;
-  --yellow: #f2b705;
-  --yellow-ink: #8a6400;   /* sarı üstünde/yanında okunur metin için */
-  --link: var(--blue);
-  --footer-bg: #15203a;
-  --footer-ink: #e8edf1;
-
-  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
-  --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
-
-  --wrap: 1080px;
-  --gutter: clamp(1rem, 5vw, 3rem);
-}
-
-/* Koyu tema: sistem ayarı koyuysa ya da düğmeyle seçildiyse.
-   Düğmeyle "açık" seçildiyse sistem ayarı yok sayılır. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #111a2c;
-    --surface: #18233a;
-    --ink: #e6ebf5;
-    --muted: #9ba7bd;
-    --line: #2a3752;
-    --blue: #8fa3ff;
-    --yellow: #f7c948;
-    --yellow-ink: #f7c948;
-    --footer-bg: #0b1222;
-    --footer-ink: #e6ebf5;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
+  /* Site her zaman koyu mavi temada (açık tema yok). */
   --bg: #111a2c;
   --surface: #18233a;
   --ink: #e6ebf5;
@@ -48,11 +12,17 @@
   --blue: #8fa3ff;
   --yellow: #f7c948;
   --yellow-ink: #f7c948;
+  --link: var(--blue);
   --footer-bg: #0b1222;
   --footer-ink: #e6ebf5;
   color-scheme: dark;
+
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+
+  --wrap: 1080px;
+  --gutter: clamp(1rem, 5vw, 3rem);
 }
-:root[data-theme="light"] { color-scheme: light; }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -150,6 +120,7 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
 }
 .portrait {
   width: clamp(150px, 22vw, 240px);
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 10px;
@@ -275,11 +246,48 @@ a.lane-title:hover { text-decoration: underline; text-decoration-color: var(--ye
 .pager small { display: block; font-weight: 400; color: var(--muted); }
 .pager-next { text-align: right; }
 
+/* ---------- Öne çıkan videolar ---------- */
+.block-intro { color: var(--muted); max-width: 60ch; margin: -.5rem 0 1.5rem; }
+.videos { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.video {
+  display: grid; grid-template-rows: auto 1fr auto; gap: .6rem;
+  padding: 1.4rem 1.4rem 1.2rem;
+  background: var(--surface); border: 1px solid var(--line); border-top: 6px solid var(--yellow); border-radius: 10px;
+}
+.video a.video-title { color: var(--ink); text-decoration: none; }
+.video a.video-title:hover { text-decoration: underline; text-decoration-color: var(--yellow); text-decoration-thickness: 2px; }
+.video-links { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; }
+.video-links a { color: var(--blue); font-weight: 700; font-size: .95rem; }
+.video-views { color: var(--muted); font-size: 1rem; }
+.video-views strong { display: block; font-family: var(--display); font-size: clamp(2.4rem, 5vw, 3.2rem); font-weight: 800; letter-spacing: -.03em; line-height: 1; color: var(--yellow); }
+.video-title { font-family: var(--display); font-weight: 700; font-size: 1.2rem; line-height: 1.25; }
+
+/* ---------- Eğitim zaman çizelgesi ---------- */
+.timeline { list-style: none; margin: 1.25rem 0 2rem; padding: 0; position: relative; }
+.timeline::before {
+  content: ""; position: absolute; left: .45rem; top: .6rem; bottom: .6rem;
+  width: 2px; background: var(--line);
+}
+.tl-item { position: relative; padding: 0 0 1.6rem 2.25rem; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item::before {
+  content: ""; position: absolute; left: 0; top: .45rem;
+  width: 1rem; height: 1rem; border-radius: 50%;
+  background: var(--bg); border: 3px solid var(--blue);
+}
+.tl-item.is-current::before { background: var(--yellow); border-color: var(--yellow); }
+.tl-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .1rem 1rem; }
+.prose .tl-title { font-family: var(--display); font-size: 1.2rem; font-weight: 700; margin: 0; letter-spacing: -.01em; }
+.tl-years { color: var(--muted); font-size: .95rem; white-space: nowrap; }
+.prose .tl-place { margin: .1rem 0 0; font-weight: 700; color: var(--blue); }
+.prose .tl-detail { margin: .15rem 0 0; color: var(--muted); }
+
 /* ---------- Alt bilgi ---------- */
 .footer { background: var(--footer-bg); color: var(--footer-ink); margin-top: 2rem; }
 .footer-inner { max-width: var(--wrap); margin: 0 auto; padding: clamp(2.5rem, 6vw, 4rem) var(--gutter) 2rem; }
 .footer-cta { font-family: var(--display); font-weight: 700; font-size: clamp(1.4rem, 3.5vw, 2.2rem); line-height: 1.2; margin: 0 0 2.5rem; letter-spacing: -.02em; }
 .footer-cta a { color: var(--yellow); overflow-wrap: anywhere; }
+.footer-a11y { margin: 0 0 1rem; font-size: .95rem; max-width: 60ch; opacity: .85; }
 .footer-meta { margin: 0; font-size: .95rem; opacity: .75; }
 
 /* ---------- Mobil ---------- */
@@ -294,25 +302,9 @@ a.lane-title:hover { text-decoration: underline; text-decoration-color: var(--ye
   .pager-next { text-align: left; }
 }
 
-/* ---------- Tema düğmesi ve menü ---------- */
+/* ---------- Menü ---------- */
 .nav-right { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
 .nav nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--yellow); text-decoration-thickness: 3px; text-underline-offset: .35em; }
-.theme-toggle {
-  width: 2.5rem; height: 2.5rem;
-  display: inline-grid; place-items: center;
-  border: 1px solid var(--line); border-radius: 50%;
-  background: var(--surface); color: var(--ink);
-  cursor: pointer; padding: 0;
-}
-.theme-toggle:hover { border-color: var(--blue); }
-.theme-toggle svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.theme-toggle .i-sun { display: none; }
-:root[data-theme="dark"] .theme-toggle .i-sun { display: block; }
-:root[data-theme="dark"] .theme-toggle .i-moon { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle .i-sun { display: block; }
-  :root:not([data-theme="light"]) .theme-toggle .i-moon { display: none; }
-}
 
 /* ---------- Rozet, yer tutucu kutular ---------- */
 .badge {
@@ -357,7 +349,7 @@ a.lane-title:hover { text-decoration: underline; text-decoration-color: var(--ye
 .card-body { display: grid; gap: .25rem; padding: 1.1rem 1.25rem 1.4rem; }
 .card .project-title { font-size: 1.4rem; }
 .card a:hover .project-title { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .15em; }
-.cover { width: 100%; border-radius: 10px; margin: 0 0 1.5rem; display: block; }
+.cover { width: 100%; height: auto; border-radius: 10px; margin: 0 0 1.5rem; display: block; }
 
 /* ---------- Hakkımda / CV ---------- */
 .about-head { display: flex; justify-content: space-between; align-items: end; gap: 1.5rem; }

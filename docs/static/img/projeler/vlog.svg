@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600">
+  <rect width="960" height="600" fill="#18233a"/>
+  <g fill="none" stroke="#2a3752" stroke-width="2">
+    <path d="M0 150h960M0 300h960M0 450h960M240 0v600M480 0v600M720 0v600"/>
+  </g>
+  <text x="120" y="270" font-family="Bricolage Grotesque, Segoe UI, Arial, sans-serif" font-size="96" font-weight="800" letter-spacing="-3" fill="#e6ebf5">Tekerlekli</text>
+  <text x="120" y="370" font-family="Bricolage Grotesque, Segoe UI, Arial, sans-serif" font-size="96" font-weight="800" letter-spacing="-3" fill="#e6ebf5">Sandalye <tspan fill="#8fa3ff">Vlog</tspan></text>
+  <text x="124" y="440" font-family="Segoe UI, Arial, sans-serif" font-size="34" fill="#f7c948">1.2M+ izlenme · views</text>
+</svg>

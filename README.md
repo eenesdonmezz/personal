@@ -13,7 +13,7 @@ Python ile yazılmış küçük bir statik site üreticisiyle yapılan kişisel 
 - İki dil: Türkçe kökte, İngilizce `/en/` altında; menüdeki TR/EN düğmesi aynı sayfanın diğer diline gider
 - Sitemap (`site.yml` içinde `base_url` verilince)
 - SEO: canonical link, Open Graph / X paylaşım önizlemeleri, schema.org verisi
-- Açık / koyu tema: sistem ayarına uyar, menüdeki düğmeyle değiştirilir ve hatırlanır
+- Her zaman koyu mavi tema
 - Mobil uyumlu tasarım
 - `sample: true` olan yazı ve projeler "Örnek" rozetiyle gösterilir
 - Yerel önizleme sunucusu: dosya kaydedince site kendini yeniden üretir
@@ -37,15 +37,15 @@ python build.py --serve    # http://localhost:8000 adresinde canlı önizleme
 
 | Yol | Ne işe yarar |
 | --- | --- |
-| `site.yml` | Ad, menü, site adresi, CV dosyası, iletişim kartları |
+| `site.yml` | Ad, menü, site adresi, CV dosyası, eğitim listesi, iletişim kartları |
 | `content/index.md` | Ana sayfadaki tanıtım yazısı |
-| `content/hakkimda.md` | Hakkımda sayfası |
+| `content/hakkimda.md` | Hakkımda sayfası (`[[egitim]]` satırı eğitim zaman çizelgesine dönüşür) |
 | `content/iletisim.md` | İletişim sayfasının giriş yazısı |
 | `static/cv/enes-donmez-cv.pdf` | İndirilebilir CV (dosya konunca Hakkımda'da düğme çıkar) |
 | `content/blog/*.md` | Blog yazıları |
 | `content/en/` | İngilizce sayfalar (`index.md`, `about.md`, `contact.md`, `blog/`). Yazının İngilizcesi Türkçesiyle aynı dosya adını taşır |
 | `site.yml` → `en:` | İngilizce menü, ana sayfa kartları ve iletişim etiketleri |
-| `content/projeler/*.md` | Projeler |
+| `content/projeler/*.md` | Projeler (İngilizcesi `content/en/projeler/`, aynı dosya adıyla) |
 | `templates/` | Jinja2 HTML şablonları |
 | `static/` | CSS ve görseller |
 | `docs/` | Üretilen site (elle düzenlenmez) |

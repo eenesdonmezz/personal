@@ -10,7 +10,7 @@
   {% if page.section == "blog" %}
   <a class="back" href="{{ root }}{{ blog_dir }}">{{ tx.all_posts }}</a>
   {% else %}
-  <a class="back" href="{{ root }}{{ prefix }}projeler/">{{ tx.all_projects }}</a>
+  <a class="back" href="{{ root }}{{ projects_dir }}">{{ tx.all_projects }}</a>
   {% endif %}
   {% if page.meta.kind %}<p class="project-kind">{{ page.meta.kind }}{% if page.meta.year %} · {{ page.meta.year }}{% endif %}</p>{% endif %}
   <h1>{{ page.title }}</h1>
@@ -23,7 +23,7 @@
     {% for t in page.tags %}<li><a href="{{ root }}{{ tag_dir }}{{ t | slugify }}/">{{ t }}</a></li>{% endfor %}
   </ul>
   {% endif %}
-  {% if page.meta.image %}<img class="cover" src="{{ root }}{{ page.meta.image }}" alt="">{% endif %}
+  {% if page.meta.image %}<img class="cover" src="{{ root }}{{ page.meta.image }}" alt="" width="960" height="600">{% endif %}
 
   <div class="prose">{{ page.html | safe }}</div>
 
