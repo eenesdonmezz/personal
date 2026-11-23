@@ -1,7 +1,7 @@
 ---
 title: "Tekerlekli Sandalye Vlog"
 kind: "İçerik üreticisi · Instagram ve TikTok"
-description: "Tekerlekli sandalye kullanıcısı olarak günlük hayatı, seyahati ve erişilebilirliği anlatan videolar. TikTok'ta 850 binden fazla izlenme."
+description: "Tekerlekli sandalye kullanıcısı olarak günlük hayatı, seyahati ve erişilebilirliği anlatan videolar. TikTok ve Instagram'da 1,2 milyondan fazla izlenme."
 side: blue
 image: "static/img/projeler/vlog.svg"
 order: 2
@@ -18,20 +18,23 @@ zorlaştıran şeyleri görünür kılmak ve farkındalık oluşturmak.
 
 ## Rakamlar
 
-- TikTok'ta 16 video, toplam **850 binden fazla izlenme**
-- En çok izlenen video: **323 bin** izlenme
+- TikTok ve Instagram'da toplam **1,2 milyondan fazla izlenme**
+- En çok izlenen video: **633 bin** izlenme (TikTok ve Instagram)
 - Instagram'da 600'ü aşkın takipçi
 
 ## Öne çıkan videolar
 
-- [İngiltere'de tekerlekli sandalyeyle ilk tren deneyimi](https://www.tiktok.com/@enesdnmz8/video/7678642932815383816):
-  Toplu taşımanın ne kadar erişilebilir olduğunu görmek için trene
-  bindim. 323 bin izlenme.
-- [İngiltere'de otobüse binmek](https://www.tiktok.com/@enesdnmz8/video/7679750716730215688):
-  "Benim için sadece ulaşım değil, özgürlüğe giden bir yol." 146 bin izlenme.
-- [Bir rampaya çıkmak](https://www.tiktok.com/@enesdnmz8/video/7662798948830170386):
-  Kimileri için birkaç saniyelik bir yol, kimileri için günün en büyük
-  engeli. 91 bin izlenme.
+- **İngiltere'de tekerlekli sandalyeyle ilk tren deneyimi:** Toplu
+  taşımanın ne kadar erişilebilir olduğunu görmek için trene bindim.
+  633 bin izlenme.
+  [TikTok](https://www.tiktok.com/@enesdnmz8/video/7678642932815383816) ·
+  [Instagram](https://www.instagram.com/enesdnmz_8/reel/Dcifc2HtDmQ/)
+- **İngiltere'de otobüse binmek:** "Benim için sadece ulaşım değil,
+  özgürlüğe giden bir yol." 179 bin izlenme.
+  [TikTok](https://www.tiktok.com/@enesdnmz8/video/7679750716730215688) ·
+  [Instagram](https://www.instagram.com/enesdnmz_8/reel/DcqLEQ3tqUG/)
+- **Sona dikkat:** Engelsiz bir İstanbul için farkındalık. 173 bin izlenme.
+  [TikTok](https://www.tiktok.com/@enesdnmz8/video/7645294520191503634)
 
 ## Konular
 

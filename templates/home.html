@@ -46,11 +46,9 @@
   <ul class="videos">
     {% for v in site.videos %}
     <li class="video">
-      <a href="{{ v.href }}">
-        <span class="video-views"><strong>{{ v.views }}</strong> {{ v.label }}</span>
-        <span class="video-title">{{ v.title }}</span>
-        <span class="video-platform">{{ v.platform }} <span aria-hidden="true">↗</span></span>
-      </a>
+      <span class="video-views"><strong>{{ v.views }}</strong> {{ v.label }}</span>
+      <a class="video-title" href="{{ v.links[0].href }}">{{ v.title }}</a>
+      <span class="video-links">{% for l in v.links %}<a href="{{ l.href }}">{{ l.platform }} <span aria-hidden="true">↗</span></a>{% endfor %}</span>
     </li>
     {% endfor %}
   </ul>

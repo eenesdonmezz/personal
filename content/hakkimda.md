@@ -25,8 +25,8 @@ oyunumuz geliştirme aşamasında. [Proje sayfası](../projeler/en2studios/)
 
 **İçerik üreticisi, Tekerlekli Sandalye Vlog.** Instagram ve TikTok'ta
 tekerlekli sandalye kullanıcısı olarak günlük hayatı, seyahati ve
-erişilebilirliği anlatan videolar üretiyorum. TikTok'taki videolar toplam
-850 binden fazla izlendi. [Proje sayfası](../projeler/tekerlekli-sandalye-vlog/)
+erişilebilirliği anlatan videolar üretiyorum. TikTok ve Instagram'daki
+videolar toplam 1,2 milyondan fazla izlendi. [Proje sayfası](../projeler/tekerlekli-sandalye-vlog/)
 
 ## Beceriler
 

@@ -1,7 +1,7 @@
 ---
 title: "Wheelchair Vlog"
 kind: "Content creator · Instagram and TikTok"
-description: "Videos about daily life, travel and accessibility as a wheelchair user. More than 850,000 views on TikTok."
+description: "Videos about daily life, travel and accessibility as a wheelchair user. More than 1.2 million views on TikTok and Instagram."
 side: blue
 image: "static/img/projeler/vlog.svg"
 order: 2
@@ -18,19 +18,22 @@ raise awareness.
 
 ## In numbers
 
-- 16 videos on TikTok with **more than 850,000 views** in total
-- Most viewed video: **323,000** views
+- More than **1.2 million views** in total across TikTok and Instagram
+- Most viewed video: **633,000** views (TikTok and Instagram)
 - More than 600 followers on Instagram
 
 ## Featured videos
 
-- [My first train journey in England as a wheelchair user](https://www.tiktok.com/@enesdnmz8/video/7678642932815383816):
-  I took the train to see how accessible public transport is. 323K views.
-- [Taking the bus in England](https://www.tiktok.com/@enesdnmz8/video/7679750716730215688):
-  "Not just transport for me, but a road to freedom." 146K views.
-- [Going up a ramp](https://www.tiktok.com/@enesdnmz8/video/7662798948830170386):
-  A few seconds for some, the biggest obstacle of the day for others.
-  91K views.
+- **My first train journey in England as a wheelchair user:** I took the
+  train to see how accessible public transport is. 633K views.
+  [TikTok](https://www.tiktok.com/@enesdnmz8/video/7678642932815383816) ·
+  [Instagram](https://www.instagram.com/enesdnmz_8/reel/Dcifc2HtDmQ/)
+- **Taking the bus in England:** "Not just transport for me, but a road to
+  freedom." 179K views.
+  [TikTok](https://www.tiktok.com/@enesdnmz8/video/7679750716730215688) ·
+  [Instagram](https://www.instagram.com/enesdnmz_8/reel/DcqLEQ3tqUG/)
+- **Watch till the end:** awareness for a barrier-free Istanbul. 173K views.
+  [TikTok](https://www.tiktok.com/@enesdnmz8/video/7645294520191503634)
 
 ## Topics
 

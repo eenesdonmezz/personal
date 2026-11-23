@@ -58,14 +58,28 @@ contact:
 
 email: "ed.donmez3466@gmail.com"
 
-# Ana sayfadaki "Öne çıkan videolar" bloğu
+# Ana sayfadaki "Öne çıkan videolar" bloğu. İzlenmeler TikTok + Instagram toplamı.
 videos_title: "Öne çıkan videolar"
-videos_intro: "Tekerlekli sandalye kullanıcısı olarak erişilebilirlik üzerine ürettiğim içerikler. TikTok'ta toplam 850 binden fazla izlenme."
+videos_intro: "Tekerlekli sandalye kullanıcısı olarak erişilebilirlik üzerine ürettiğim içerikler. TikTok ve Instagram'da toplam 1,2 milyondan fazla izlenme."
 videos_more: { text: "Projeyi incele", href: "projeler/tekerlekli-sandalye-vlog/" }
 videos:
-  - { views: "323 bin", label: "izlenme", title: "İngiltere'de tekerlekli sandalyeyle ilk tren deneyimi", platform: "TikTok", href: "https://www.tiktok.com/@enesdnmz8/video/7678642932815383816" }
-  - { views: "146 bin", label: "izlenme", title: "İngiltere'de otobüse binmek: özgürlüğe giden bir yol", platform: "TikTok", href: "https://www.tiktok.com/@enesdnmz8/video/7679750716730215688" }
-  - { views: "91 bin", label: "izlenme", title: "Bir rampaya çıkmak: erişilebilirlik bir hak", platform: "TikTok", href: "https://www.tiktok.com/@enesdnmz8/video/7662798948830170386" }
+  - views: "633 bin"
+    label: "izlenme"
+    title: "İngiltere'de tekerlekli sandalyeyle ilk tren deneyimi"
+    links:
+      - { platform: "TikTok", href: "https://www.tiktok.com/@enesdnmz8/video/7678642932815383816" }
+      - { platform: "Instagram", href: "https://www.instagram.com/enesdnmz_8/reel/Dcifc2HtDmQ/" }
+  - views: "179 bin"
+    label: "izlenme"
+    title: "İngiltere'de otobüse binmek: özgürlüğe giden bir yol"
+    links:
+      - { platform: "TikTok", href: "https://www.tiktok.com/@enesdnmz8/video/7679750716730215688" }
+      - { platform: "Instagram", href: "https://www.instagram.com/enesdnmz_8/reel/DcqLEQ3tqUG/" }
+  - views: "173 bin"
+    label: "izlenme"
+    title: "Sona dikkat: engelsiz bir İstanbul için"
+    links:
+      - { platform: "TikTok", href: "https://www.tiktok.com/@enesdnmz8/video/7645294520191503634" }
 
 # Hakkımda sayfasındaki eğitim zaman çizelgesi (yeniden eskiye).
 # years boşsa yazılmaz; current: true olan satır "devam ediyor" diye işaretlenir.
@@ -102,12 +116,26 @@ en:
     - { text: "En2Studios", href: "https://www.en2studios.com" }
     - { text: "Email", href: "mailto:ed.donmez3466@gmail.com" }
   videos_title: "Featured videos"
-  videos_intro: "Content I create about accessibility as a wheelchair user. More than 850,000 views on TikTok."
+  videos_intro: "Content I create about accessibility as a wheelchair user. More than 1.2 million views across TikTok and Instagram."
   videos_more: { text: "See the project", href: "en/projects/tekerlekli-sandalye-vlog/" }
   videos:
-    - { views: "323K", label: "views", title: "My first train journey in England as a wheelchair user", platform: "TikTok", href: "https://www.tiktok.com/@enesdnmz8/video/7678642932815383816" }
-    - { views: "146K", label: "views", title: "Taking the bus in England: a road to freedom", platform: "TikTok", href: "https://www.tiktok.com/@enesdnmz8/video/7679750716730215688" }
-    - { views: "91K", label: "views", title: "Going up a ramp: accessibility is a right", platform: "TikTok", href: "https://www.tiktok.com/@enesdnmz8/video/7662798948830170386" }
+    - views: "633K"
+      label: "views"
+      title: "My first train journey in England as a wheelchair user"
+      links:
+        - { platform: "TikTok", href: "https://www.tiktok.com/@enesdnmz8/video/7678642932815383816" }
+        - { platform: "Instagram", href: "https://www.instagram.com/enesdnmz_8/reel/Dcifc2HtDmQ/" }
+    - views: "179K"
+      label: "views"
+      title: "Taking the bus in England: a road to freedom"
+      links:
+        - { platform: "TikTok", href: "https://www.tiktok.com/@enesdnmz8/video/7679750716730215688" }
+        - { platform: "Instagram", href: "https://www.instagram.com/enesdnmz_8/reel/DcqLEQ3tqUG/" }
+    - views: "173K"
+      label: "views"
+      title: "Watch till the end: towards a barrier-free Istanbul"
+      links:
+        - { platform: "TikTok", href: "https://www.tiktok.com/@enesdnmz8/video/7645294520191503634" }
   education:
     - { title: "Social Work, BA", place: "Istanbul Sabahattin Zaim University", years: "2024 – present", detail: "2nd year", current: true }
     - { title: "English Preparatory Programme", place: "Istanbul Sabahattin Zaim University", years: "", detail: "Completed A1 level" }

@@ -24,8 +24,8 @@ games, digital products for businesses and websites. Our first game is in
 development. [Project page](../projects/en2studios/)
 
 **Content creator, Wheelchair Vlog.** On Instagram and TikTok I make videos
-about daily life, travel and accessibility as a wheelchair user. My TikTok
-videos have been viewed more than 850,000 times in total.
+about daily life, travel and accessibility as a wheelchair user. My videos on
+TikTok and Instagram have been viewed more than 1.2 million times in total.
 [Project page](../projects/tekerlekli-sandalye-vlog/)
 
 ## Skills
