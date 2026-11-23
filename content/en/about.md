@@ -1,36 +1,27 @@
 ---
 title: "About"
-description: "Enes Dönmez: Social Work student at İZÜ and founder of En2Studios. Education, work and CV."
+description: "Enes Dönmez: Social Work student at İZÜ and founder of En2Studios. Education, experience and CV."
 ---
 
-Hi, I'm Enes. I was born on 28 September 2007. I'm a second-year Social Work student at Istanbul Sabahattin
-Zaim University. Alongside my studies, I love learning new things and
-gaining different experiences.
+I'm Enes Dönmez, born on 28 September 2007. I'm a second-year Social Work
+student at Istanbul Sabahattin Zaim University and the founder of
+En2Studios, a game and digital product studio.
 
-I'm interested in technology and software. In my free time I read books,
-explore new places and travel.
-
-On this blog I'll share posts about university life, technology, my hobbies
-and my travels. In short, this is my personal space where I bring together
-what I learn and what I experience.
-
-Enjoy reading!
+Alongside my social work studies, I'm interested in technology and
+software. At En2Studios we work on games, digital products for businesses
+and websites. I'm always open to learning new things and gaining new
+experiences; the language course I took in England is one of the most
+valuable of them.
 
 ## Education
 
-**Social Work, BA.** Istanbul Sabahattin Zaim University,
-since 2024, currently in my 2nd year
+[[egitim]]
 
-**English language course.** England, a course of a little over a month
+## Experience
 
-**Middle school and high school.** Biltek College
-
-**Primary school.** Devran College
-
-## Work
-
-**En2Studios, founder.** Games, digital products for businesses and
-websites. Our first game is currently in development.
+**Founder, En2Studios.** At the studio I founded with friends, we build
+games, digital products for businesses and websites. Our first game is in
+development. [Project page](../projects/en2studios/)
 
 ## Skills
 
@@ -40,7 +31,10 @@ websites. Our first game is currently in development.
 
 - Social work and community work
 - Game design and development
+- Technology and software
+- Reading and travelling
 
 ## Contact
 
-You can find all my contact details on the [Contact](../contact/) page.
+For collaborations and applications, you can reach me through the channels
+on the [Contact](../contact/) page.

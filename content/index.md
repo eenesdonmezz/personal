@@ -1,2 +1,2 @@
-İZÜ Sosyal Hizmet bölümünde ikinci sınıf öğrencisiyim.
-Ayrıca En2Studios'un kurucusuyum.
+İstanbul Sabahattin Zaim Üniversitesi'nde Sosyal Hizmet öğrencisiyim ve
+oyun ve dijital ürün stüdyosu En2Studios'un kurucusuyum.

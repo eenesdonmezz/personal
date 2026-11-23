@@ -1,2 +1,2 @@
-I'm a second-year Social Work student at Istanbul Sabahattin Zaim University.
-I'm also the founder of En2Studios.
+I'm a Social Work student at Istanbul Sabahattin Zaim University and the
+founder of En2Studios, a game and digital product studio.

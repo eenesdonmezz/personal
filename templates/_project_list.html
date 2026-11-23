@@ -3,7 +3,7 @@
   <li class="card{% if p.meta.side %} side-{{ p.meta.side }}{% endif %}">
     <a href="{{ root }}{{ p.url }}">
       <span class="card-media">
-        {% if p.meta.image %}<img src="{{ root }}{{ p.meta.image }}" alt="" loading="lazy">
+        {% if p.meta.image %}<img src="{{ root }}{{ p.meta.image }}" alt="" width="960" height="600" loading="lazy">
         {% else %}<span class="card-mono" aria-hidden="true">{{ p.title[:2] }}</span>{% endif %}
       </span>
       <span class="card-body">

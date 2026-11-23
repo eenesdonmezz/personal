@@ -113,6 +113,23 @@ def load_section_in(folder: Path, url_prefix: str) -> list[Page]:
     return sorted(pages, key=lambda p: p.date or date.min, reverse=True)
 
 
+def make_webp(photo: Path) -> tuple[str, tuple[int, int] | None]:
+    """Fotoğrafın küçültülmüş WebP kopyasını üretir (daha hızlı yüklenir).
+
+    Pillow kurulu değilse sessizce atlanır; site yine JPEG ile çalışır.
+    """
+    try:
+        from PIL import Image, ImageOps
+    except ImportError:
+        return "", None
+    with Image.open(photo) as im:
+        im = ImageOps.exif_transpose(im).convert("RGB")
+        size = im.size
+        im.thumbnail((480, 600))  # en büyük gösterim 240px; 2x ekranlar için 480px
+        im.save(OUT / "static" / "img" / "profil.webp", "WEBP", quality=80, method=6)
+    return "static/img/profil.webp", size
+
+
 def write(rel: str, html: str) -> None:
     target = OUT / rel
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -124,11 +141,12 @@ LANGS = {
     "tr": {
         "prefix": "", "content": CONTENT, "locale": "tr_TR",
         "about": "hakkimda", "contact": "iletisim", "blog": "blog", "tag": "etiket",
+        "projects": "projeler",
         "months": TR_MONTHS,
         "t": {
             "skip": "İçeriğe geç", "menu": "Ana menü",
             "switch_label": "EN", "switch_title": "English",
-            "footer_cta": "Bir fikrin ya da sorun varsa yaz:",
+            "footer_cta": "İş birliği ve başvurular için:",
             "posts": "Yazılar", "see_all": "Hepsini gör", "projects": "Projeler",
             "all": "Hepsi", "tags": "Etiketler", "empty": "Burada henüz bir şey yok.",
             "min_short": "dk okuma", "min_long": "dakikalık okuma",
@@ -138,18 +156,20 @@ LANGS = {
             "cv_updated": "son güncelleme", "cv_btn": "CV'yi indir",
             "coming": "Eklenecek", "tag_title": "Etiket",
             "blog_intro": "Üniversite, teknoloji, hobiler ve seyahat üzerine yazılar.",
-            "projects_intro": "Üzerinde çalıştığım işler.",
+            "projects_intro": "Kurduğum ve üzerinde çalıştığım işler.",
+            "now": "Devam ediyor",
         },
     },
     "en": {
         "prefix": "en/", "content": CONTENT / "en", "locale": "en_US",
         "about": "about", "contact": "contact", "blog": "blog", "tag": "tag",
+        "projects": "projects",
         "months": ["January", "February", "March", "April", "May", "June", "July",
                    "August", "September", "October", "November", "December"],
         "t": {
             "skip": "Skip to content", "menu": "Main menu",
             "switch_label": "TR", "switch_title": "Türkçe",
-            "footer_cta": "Have an idea or a question? Write to me:",
+            "footer_cta": "For collaborations and opportunities:",
             "posts": "Posts", "see_all": "See all", "projects": "Projects",
             "all": "All", "tags": "Tags", "empty": "Nothing here yet.",
             "min_short": "min read", "min_long": "min read",
@@ -159,7 +179,8 @@ LANGS = {
             "cv_updated": "last updated", "cv_btn": "Download CV",
             "coming": "Coming soon", "tag_title": "Tag",
             "blog_intro": "Posts about university, technology, hobbies and travel.",
-            "projects_intro": "Things I have worked on.",
+            "projects_intro": "Things I have founded and worked on.",
+            "now": "Ongoing",
         },
     },
 }
@@ -195,6 +216,7 @@ def build() -> None:
             (OUT / "static" / "img").mkdir(parents=True, exist_ok=True)
             shutil.copy2(photo, OUT / "static" / "img" / photo.name)
             raw_config["photo"] = f"static/img/{photo.name}"
+            raw_config["photo_webp"], raw_config["photo_size"] = make_webp(photo)
             break
 
     # CV: site.yml'deki dosya static/ altında varsa Hakkımda'da indirme düğmesi çıkar
@@ -211,7 +233,7 @@ def build() -> None:
             continue
         posts = load_section_in(L["content"] / "blog", f"{L['prefix']}{L['blog']}/")
         projects = sorted(load_section_in(L["content"] / "projeler",
-                                          f"{L['prefix']}projeler/"),
+                                          f"{L['prefix']}{L['projects']}/"),
                           key=lambda p: p.meta.get("order", 99))
         loaded[lang] = (posts, projects)
 
@@ -228,6 +250,9 @@ def build() -> None:
         if kind == "post":
             match = [p for p in loaded[other][0] if p.slug == slug]
             return match[0].url if match else f"{O['prefix']}{O['blog']}/"
+        if kind in ("projects", "project"):
+            match = [p for p in loaded[other][1] if p.slug == slug]
+            return match[0].url if match else f"{O['prefix']}{O['projects']}/"
         return O["prefix"]
 
     for lang, (posts, projects) in loaded.items():
@@ -249,6 +274,7 @@ def build() -> None:
             path = rel.removesuffix("index.html")
             ctx.update(path=path, site=config, tx=t, lang=lang, prefix=prefix,
                        locale=L["locale"], blog_dir=f"{prefix}{L['blog']}/",
+                       projects_dir=f"{prefix}{L['projects']}/",
                        tag_dir=f"{prefix}{L['tag']}/", alt=alt,
                        alt_lang="en" if lang == "tr" else "tr")
             ctx["canonical"] = f"{base_url}/{path}" if base_url else ""
@@ -265,6 +291,11 @@ def build() -> None:
 
         render("home.html", f"{prefix}index.html", alt=counterpart(lang, "home"),
                page=home, posts=posts[:3], projects=projects[:4])
+        # Hakkımda'daki [[egitim]] satırı, site.yml'deki eğitim listesinden
+        # çizilen zaman çizelgesiyle değişir
+        timeline = env.get_template("_timeline.html").render(
+            items=config.get("education", []), tx=t)
+        about.html = about.html.replace("<p>[[egitim]]</p>", timeline)
         render("about.html", f"{prefix}{L['about']}/index.html",
                alt=counterpart(lang, "about"), page=about)
         render("contact.html", f"{prefix}{L['contact']}/index.html",
@@ -289,10 +320,12 @@ def build() -> None:
 
         # Projeler sayfası sadece projeler/ içinde dosya varsa üretilir
         if projects:
-            render("list.html", f"{prefix}projeler/index.html", title=t["projects"],
+            render("list.html", f"{prefix}{L['projects']}/index.html", title=t["projects"],
+                   alt=counterpart(lang, "projects"),
                    kind="projects", intro=t["projects_intro"], items=projects, tags=[])
         for proj in projects:
-            render("post.html", f"{proj.url}index.html", page=proj, newer=None, older=None)
+            render("post.html", f"{proj.url}index.html", page=proj, newer=None, older=None,
+                   alt=counterpart(lang, "project", proj.slug))
 
         if lang == "tr":
             render("404.html", "404.html")

@@ -11,7 +11,7 @@
       <span class="name-line" aria-hidden="true">{{ site.first_name }}</span>
       <span class="name-line" aria-hidden="true">{{ site.last_name | umlaut }}</span>
     </h1>
-    {% if site.photo %}<img class="portrait" src="{{ root }}{{ site.photo }}" alt="{{ site.name }}">{% endif %}
+    {% if site.photo %}<picture>{% if site.photo_webp %}<source srcset="{{ root }}{{ site.photo_webp }}" type="image/webp">{% endif %}<img class="portrait" src="{{ root }}{{ site.photo }}" alt="{{ site.name }}"{% if site.photo_size %} width="{{ site.photo_size[0] }}" height="{{ site.photo_size[1] }}"{% endif %} fetchpriority="high"></picture>{% endif %}
   </div>
 
   <div class="hero-body">
@@ -40,7 +40,7 @@
 <section class="block">
   <header class="block-head">
     <h2>{{ tx.projects }}</h2>
-    <a href="{{ root }}{{ prefix }}projeler/">{{ tx.see_all }}</a>
+    <a href="{{ root }}{{ projects_dir }}">{{ tx.see_all }}</a>
   </header>
   {% include "_project_list.html" with context %}
 </section>

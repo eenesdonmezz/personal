@@ -29,9 +29,12 @@
   <link rel="icon" href="../../static/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../static/style.css?v=7ad6e977">
-  <script src="../../static/bg.js?v=7ad6e977" defer></script>
+  
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="../../static/style.css?v=02ac9391">
+  <script src="../../static/bg.js?v=02ac9391" defer></script>
 </head>
 <body class="">
   <canvas class="bg-field" aria-hidden="true"></canvas>
@@ -40,7 +43,7 @@
     <a class="brand" href="../../en/">Enes<span class="brand-dots" aria-hidden="true"><i class="b"></i><i class="y"></i></span></a>
     <div class="nav-right">
       <nav aria-label="Main menu">
-        <a href="../../en/about/">About</a><a href="../../en/blog/" aria-current="page">Posts</a><a href="../../en/contact/">Contact</a>
+        <a href="../../en/about/">About</a><a href="../../en/projects/">Projects</a><a href="../../en/blog/" aria-current="page">Posts</a><a href="../../en/contact/">Contact</a>
       </nav>
       <a class="lang-switch" href="../../blog/" hreflang="tr" lang="tr" title="Türkçe" data-lang="tr">TR</a>
     </div>
@@ -77,7 +80,7 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <p class="footer-cta">Have an idea or a question? Write to me:<br>
+      <p class="footer-cta">For collaborations and opportunities:<br>
         <a href="mailto:ed.donmez3466@gmail.com">ed.donmez3466@gmail.com</a></p>
       <p class="footer-meta">© 2026 Enes Dönmez.</p>
     </div>

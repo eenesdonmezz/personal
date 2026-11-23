@@ -1,46 +1,40 @@
 ---
 title: "Hakkımda"
-description: "Enes Dönmez: İZÜ Sosyal Hizmet öğrencisi, En2Studios kurucusu. Eğitim, çalışmalar ve CV."
+description: "Enes Dönmez: İZÜ Sosyal Hizmet öğrencisi, En2Studios kurucusu. Eğitim, deneyim ve CV."
 ---
 
-Merhaba, ben Enes. 28 Eylül 2007'de doğdum. İstanbul Sabahattin Zaim Üniversitesi'nde Sosyal Hizmet
-2. sınıf öğrencisiyim. Okulun yanında yeni şeyler öğrenmeyi ve farklı
-deneyimler edinmeyi seviyorum.
+Ben Enes Dönmez. 28 Eylül 2007'de doğdum. İstanbul Sabahattin Zaim
+Üniversitesi Sosyal Hizmet bölümünde 2. sınıf öğrencisiyim ve oyun ve
+dijital ürün stüdyosu En2Studios'un kurucusuyum.
 
-Teknoloji ve yazılımla ilgileniyorum. Boş zamanlarımda kitap okuyor, yeni
-yerler keşfediyor ve seyahat ediyorum.
-
-Bu blogda üniversite hayatımdan, teknolojiden, hobilerimden ve
-seyahatlerimden yazılar paylaşacağım. Kısacası burası öğrendiklerimi ve
-yaşadıklarımı bir araya getirdiğim kişisel alanım.
-
-Keyifli okumalar!
+Sosyal hizmet eğitimimin yanında teknoloji ve yazılımla ilgileniyorum.
+En2Studios'ta oyunlar, işletmeler için dijital ürünler ve web siteleri
+üzerinde çalışıyoruz. Yeni şeyler öğrenmeye ve farklı deneyimler edinmeye
+açığım; İngiltere'de aldığım dil eğitimi bu deneyimlerin en değerlilerinden
+biri oldu.
 
 ## Eğitim
 
-**Sosyal Hizmet, lisans.** İstanbul Sabahattin Zaim Üniversitesi,
-2024'ten beri, şu an 2. sınıf
+[[egitim]]
 
-**İngilizce dil eğitimi.** İngiltere, bir aydan biraz uzun süren kurs
+## Deneyim
 
-**Ortaokul ve lise.** Biltek Koleji
-
-**İlkokul.** Devran Koleji
-
-## Çalışmalar
-
-**En2Studios, kurucu.** Oyunlar, işletmeler için dijital ürünler ve
-web siteleri. Şu an ilk oyunumuz geliştiriliyor.
+**Kurucu, En2Studios.** Arkadaşlarımla kurduğum stüdyoda oyunlar,
+işletmeler için dijital ürünler ve web siteleri geliştiriyoruz. İlk
+oyunumuz geliştirme aşamasında. [Proje sayfası](../projeler/en2studios/)
 
 ## Beceriler
 
-- **İngilizce:** B1-B2 seviyesi (İngiltere'de dil eğitimi aldım)
+- **İngilizce:** B1-B2 seviyesi (İngiltere'de dil eğitimi)
 
-## İlgilendiğim konular
+## İlgi alanları
 
 - Sosyal hizmet ve topluluk çalışmaları
 - Oyun tasarımı ve geliştirme
+- Teknoloji ve yazılım
+- Kitap okumak, seyahat etmek
 
 ## İletişim
 
-Bütün iletişim kanallarım [İletişim](../iletisim/) sayfasında.
+İş birliği ve başvurularla ilgili bana [İletişim](../iletisim/) sayfasındaki
+kanallardan ulaşabilirsiniz.
