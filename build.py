@@ -198,7 +198,7 @@ def build() -> None:
     env.filters["slugify"] = slugify
     env.filters["umlaut"] = umlaut
     # Stil ve betik değişince adres de değişsin: tarayıcılar eski dosyayı kullanmasın
-    asset_v = hashlib.md5(b"".join((STATIC / f).read_bytes() for f in ("style.css", "bg.js"))).hexdigest()[:8]
+    asset_v = hashlib.md5(b"".join((STATIC / f).read_bytes() for f in ("style.css", "bg.js", "sayac.js"))).hexdigest()[:8]
     env.globals.update(year=date.today().year, asset_v=asset_v)
 
     # Klasörün kendisini değil içini temizle: Windows'ta açık bir sunucu
