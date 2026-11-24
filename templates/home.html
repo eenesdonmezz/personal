@@ -2,6 +2,7 @@
 {% block body_class %}home{% endblock %}
 {% block jsonld %}
   <script type="application/ld+json">{{ {"@context": "https://schema.org", "@type": "WebSite", "name": site.name, "url": site.base_url ~ "/", "inLanguage": lang} | tojson }}</script>
+  <script src="{{ root }}static/sayac.js?v={{ asset_v }}" defer></script>
 {% endblock %}
 
 {% block content %}
